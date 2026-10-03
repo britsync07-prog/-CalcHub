@@ -1,0 +1,139 @@
+export interface SEOProps {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  type?: 'website' | 'article';
+  schema?: Record<string, unknown> | Array<Record<string, unknown>>;
+}
+
+export function updateSEO({
+  title,
+  description,
+  canonicalPath = '',
+  type = 'website',
+  schema
+}: SEOProps) {
+  if (typeof document === 'undefined') return;
+
+  // 1. Update Title
+  const siteName = 'Everyday Calculator Hub';
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  document.title = fullTitle;
+
+  // 2. Helper to set or create meta tag
+  const setMeta = (attrName: string, attrVal: string, content: string) => {
+    let tag = document.querySelector(`meta[${attrName}="${attrVal}"]`) as HTMLMetaElement | null;
+    if (!tag) {
+      tag = document.createElement('meta');
+      tag.setAttribute(attrName, attrVal);
+      document.head.appendChild(tag);
+    }
+    tag.setAttribute('content', content);
+  };
+
+  // 3. Standard Meta
+  setMeta('name', 'description', description);
+
+  // 4. OpenGraph
+  setMeta('property', 'og:title', fullTitle);
+  setMeta('property', 'og:description', description);
+  setMeta('property', 'og:type', type);
+  setMeta('property', 'og:site_name', siteName);
+
+  // Dynamic canonical URL resolution
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com';
+  const canonicalUrl = `${baseUrl}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
+  setMeta('property', 'og:url', canonicalUrl);
+
+  // 5. Twitter
+  setMeta('name', 'twitter:title', fullTitle);
+  setMeta('name', 'twitter:description', description);
+  setMeta('name', 'twitter:card', 'summary_large_image');
+
+  // 6. Canonical link
+  let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+  if (!canonicalLink) {
+    canonicalLink = document.createElement('link');
+    canonicalLink.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonicalLink);
+  }
+  canonicalLink.setAttribute('href', canonicalUrl);
+
+  // 7. Schema.org JSON-LD injection
+  const existingJsonLd = document.querySelectorAll('script[data-seo-jsonld="true"]');
+  existingJsonLd.forEach(el => el.remove());
+
+  if (schema) {
+    const schemas = Array.isArray(schema) ? schema : [schema];
+    schemas.forEach(item => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-seo-jsonld', 'true');
+      script.textContent = JSON.stringify(item);
+      document.head.appendChild(script);
+    });
+  }
+}
+
+export function generateCalculatorSchema({
+  name,
+  description,
+  url,
+  category
+}: {
+  name: string;
+  description: string;
+  url: string;
+  category: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name,
+    description,
+    url,
+    applicationCategory: category,
+    operatingSystem: 'All',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD'
+    },
+    creator: {
+      '@type': 'Organization',
+      name: 'Everyday Calculator Hub',
+      url: typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com'
+    }
+  };
+}
+
+export function generateFaqSchema(faqs: { question: string; answer: string }[]) {
+  if (!faqs || faqs.length === 0) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
+}
+
+export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com';
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url.startsWith('http') ? item.url : `${origin}${item.url}`
+    }))
+  };
+}

@@ -4,6 +4,7 @@ import { CATEGORIES } from '../data/categories';
 import { CALCULATORS } from '../data/calculators';
 import { PROGRAMMATIC_PAGES, getProgrammaticHref } from '../data/programmaticPages';
 import { AdSlot } from '../components/AdSlot';
+import { PromoBanner } from '../components/PromoBanner';
 import { RegionalLocale } from '../types/calculator';
 
 interface HomePageProps {
@@ -51,6 +52,8 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLocale, onNavigate, o
         <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
           Fast, accurate math problem solvers, personal finance tools, date calculators, unit conversions, and home improvement estimators. No sign-up required.
         </p>
+
+        <PromoBanner variant="inline" />
 
         {/* Prominent Quick-Search Bar */}
         <div className="max-w-xl mx-auto mt-6">

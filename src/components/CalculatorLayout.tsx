@@ -4,6 +4,7 @@ import { CalculatorDefinition, RegionalLocale, TeamMember } from '../types/calcu
 import { Breadcrumbs } from './Breadcrumbs';
 import { AdSlot } from './AdSlot';
 import { EmbedCalculatorModal } from './EmbedCalculatorModal';
+import { PromoBanner } from './PromoBanner';
 import { CALCULATORS } from '../data/calculators';
 import { CATEGORIES } from '../data/categories';
 
@@ -414,6 +415,8 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
 
         {/* Right Sidebar Column (4 cols) - Sticky Ad & Quick Category Nav */}
         <aside className="lg:col-span-4 space-y-6">
+          <PromoBanner variant="sidebar" />
+
           {/* Half-Page Desktop Sidebar Ad (Zero CLS) */}
           <AdSlot type="sidebar" id="sidebar-half-page-ad" className="hidden lg:flex" />
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { PromoBanner } from './components/PromoBanner';
 import { SearchBar } from './components/SearchBar';
 import { CalculationHistoryDrawer } from './components/CalculationHistoryDrawer';
 import { HomePage } from './pages/HomePage';
@@ -202,6 +203,7 @@ export const App: React.FC<AppProps> = ({ initialPath }) => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+      <PromoBanner variant="top" />
       {/* 3-Zone Compliant Top Navigation Bar */}
       <Header
         currentLocale={currentLocale}

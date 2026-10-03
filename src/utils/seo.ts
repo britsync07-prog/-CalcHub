@@ -27,7 +27,7 @@ export function updateSEO({
 
   // 1. Update Title
   const siteName = 'Everyday Calculator Hub';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) || title.length >= 48 ? title : `${title} | ${siteName}`;
   document.title = fullTitle;
 
   // 2. Helper to set or create meta tag

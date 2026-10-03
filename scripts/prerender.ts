@@ -175,7 +175,7 @@ async function runPrerender() {
     routes.push({
       path: `/calculators/${calc.slug}`,
       outputPath: path.join(DIST_DIR, 'calculators', calc.slug, 'index.html'),
-      title: calc.metaTitle.includes('Everyday Calculator Hub') ? calc.metaTitle : `${calc.metaTitle} | Everyday Calculator Hub`,
+      title: calc.metaTitle,
       description: calc.metaDescription,
       canonicalPath: `/calculators/${calc.slug}`,
       schemas,
@@ -188,7 +188,7 @@ async function runPrerender() {
     routes.push({
       path: `/tools/${calc.slug}`,
       outputPath: path.join(DIST_DIR, 'tools', calc.slug, 'index.html'),
-      title: calc.metaTitle.includes('Everyday Calculator Hub') ? calc.metaTitle : `${calc.metaTitle} | Everyday Calculator Hub`,
+      title: calc.metaTitle,
       description: calc.metaDescription,
       canonicalPath: `/calculators/${calc.slug}`, // Points canonical to primary URL
       schemas,
@@ -225,7 +225,7 @@ async function runPrerender() {
     routes.push({
       path: `/blog/${guide.slug}`,
       outputPath: path.join(DIST_DIR, 'blog', guide.slug, 'index.html'),
-      title: `${guide.title} | Everyday Calculator Hub`,
+      title: guide.metaTitle,
       description: guide.metaDescription,
       canonicalPath: `/blog/${guide.slug}`,
       type: 'article',

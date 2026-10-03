@@ -530,7 +530,7 @@ export const GUIDES: GuideDefinition[] = [
     slug: 'personal-budgeting-percentages',
     title: 'Personal Budgeting With Percentages: Applying the 50/30/20 Rule to Your Salary',
     metaTitle: 'Personal Budgeting with Percentages: The 50/30/20 Rule Explained',
-    metaDescription: 'Learn how to budget using percentage allocation formulas. Master the 50/30/20 rule for needs, wants, and savings on net income.',
+    metaDescription: 'Master personal budgeting with percentage formulas. Learn how to allocate your net take-home salary across needs, wants, and savings with the 50/30/20 rule.',
     h1: 'Personal Budgeting With Percentages: Applying the 50/30/20 Rule',
     summary: 'Transform your paycheck into a clear financial plan. Calculate exact dollar allocations for needs, wants, and investments using mathematical ratios.',
     publishedDate: '2025-01-08',

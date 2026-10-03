@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { updateSEO } from '../utils/seo';
+import { EDITORIAL_TEAM } from '../data/editorialTeam';
 
 interface TrustPageProps {
   type: 'about' | 'contact' | 'privacy' | 'terms' | 'disclaimer';
@@ -16,10 +17,17 @@ export const TrustPages: React.FC<TrustPageProps> = ({ type, onNavigate }) => {
       terms: 'Terms of Use - Everyday Calculator Hub',
       disclaimer: 'General & Informational Disclaimer - Everyday Calculator Hub'
     };
+    const descriptions: Record<string, string> = {
+      about: 'Meet the editors behind Everyday Calculator Hub and our mission: free, accurate, private calculators verified against ISO, NIST, and WHO standards.',
+      contact: 'Contact the Everyday Calculator Hub editors with feedback, corrections, or new calculator suggestions. Typical response within 1-2 business days.',
+      privacy: 'How Everyday Calculator Hub protects you: client-side computation, local-only storage, and privacy-respecting ads under GDPR and CCPA rules.',
+      terms: 'The rules for using Everyday Calculator Hub: permitted personal and commercial use, scraping limits, and limitation of liability.',
+      disclaimer: 'Why calculator results are estimates: financial, construction, and health tools need professional verification before binding decisions.'
+    };
 
     updateSEO({
       title: titles[type] || 'Everyday Calculator Hub',
-      description: 'Official information, editorial standards, terms of service, and contact details for Everyday Calculator Hub.',
+      description: descriptions[type] || descriptions.about,
       canonicalPath: `/${type === 'privacy' ? 'privacy-policy' : type === 'terms' ? 'terms-of-use' : type}`
     });
   }, [type]);
@@ -74,6 +82,20 @@ export const TrustPages: React.FC<TrustPageProps> = ({ type, onNavigate }) => {
           <p>
             Our calculators support common formatting conventions for the United States, Canada, the United Kingdom, Australia, and New Zealand. Users can switch between Imperial and Metric measurements and locale-specific currency notation at any time via the regional selector in the top bar.
           </p>
+
+          <h2 className="text-lg font-bold text-slate-900 pt-4 border-t border-slate-100">
+            Who Reviews Our Calculators?
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {EDITORIAL_TEAM.map((member) => (
+              <div key={member.id} className="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-1.5">
+                <div className="font-bold text-slate-900 text-sm">{member.name}</div>
+                <div className="text-xs font-semibold text-blue-600">{member.role}</div>
+                <div className="text-xs text-slate-500">{member.credentials}</div>
+                <p className="text-xs text-slate-600 leading-relaxed pt-1">{member.bio}</p>
+              </div>
+            ))}
+          </div>
         </article>
       )}
 

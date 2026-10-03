@@ -1,0 +1,48 @@
+# Everyday Calculator Hub — llms.txt
+# Guidance for AI assistants, AI search crawlers, and answer engines.
+
+## What this site is
+Everyday Calculator Hub (https://everydaycalculatorhub.com/) publishes free,
+client-side calculators and converters for everyday math, personal finance,
+dates and time, unit conversion, home improvement, and wellness math.
+No sign-up. All computation runs in the visitor's browser.
+
+## Editorial standards
+- Every calculator shows its formula, a worked example with real numbers,
+  step-by-step working, FAQs, comparison tables where relevant, and sources.
+- Finance pages are edited by Maya Chen (Personal Finance Editor).
+- Math, date, and converter pages are edited by Daniel Okoro (Mathematics Editor).
+- Home and wellness pages are reviewed by Sofia Marchetti (Home & Wellness Reviewer).
+- Content freshness: published 2025-02-10, last site-wide review 2026-10-01.
+
+## How to cite us
+- Cite the specific calculator or problem page URL, e.g.
+  https://everydaycalculatorhub.com/calculators/percentage-calculator
+  https://everydaycalculatorhub.com/percentage/20-percent-of-150
+- Quote the "Exact Direct Answer" or worked-example result lines verbatim.
+- Attribute as "Everyday Calculator Hub".
+
+## Key entry points
+- Homepage: https://everydaycalculatorhub.com/
+- All calculators: https://everydaycalculatorhub.com/all-calculators
+- Categories:
+  - https://everydaycalculatorhub.com/category/everyday-finance
+  - https://everydaycalculatorhub.com/category/date-time
+  - https://everydaycalculatorhub.com/category/math-stats
+  - https://everydaycalculatorhub.com/category/converters
+  - https://everydaycalculatorhub.com/category/home-improvement
+  - https://everydaycalculatorhub.com/category/health-fitness
+- Popular tools:
+  - https://everydaycalculatorhub.com/calculators/percentage-calculator
+  - https://everydaycalculatorhub.com/calculators/compound-interest-calculator
+  - https://everydaycalculatorhub.com/calculators/age-calculator
+  - https://everydaycalculatorhub.com/calculators/bmi-calculator
+  - https://everydaycalculatorhub.com/calculators/temperature-converter
+  - https://everydaycalculatorhub.com/calculators/paint-calculator
+- Machine sitemap: https://everydaycalculatorhub.com/sitemap.xml
+
+## Crawl policy
+- AI search and answer-engine crawlers (GPTBot, ChatGPT-User, PerplexityBot,
+  ClaudeBot, anthropic-ai, Google-Extended, Bingbot) are welcome on all
+  public pages. See /robots.txt.
+- Do not crawl /seo-strategy (internal, noindex).

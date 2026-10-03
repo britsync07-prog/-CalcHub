@@ -104,12 +104,116 @@
   <url><loc>https://everydaycalculatorhub.com/calculators/daily-water-intake-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://everydaycalculatorhub.com/calculators/body-mass-index-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
-  <!-- Programmatic Pages -->
+  <!-- Programmatic Pages (hand-written) -->
   <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://everydaycalculatorhub.com/days-until/christmas</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://everydaycalculatorhub.com/days-until/new-year</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://everydaycalculatorhub.com/days-until/halloween</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Programmatic Pages (bulk percentage long-tail) -->
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Trust Pages -->
   <url><loc>https://everydaycalculatorhub.com/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
@@ -118,5 +222,4 @@
   <url><loc>https://everydaycalculatorhub.com/terms-of-use</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://everydaycalculatorhub.com/disclaimer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://everydaycalculatorhub.com/sitemap</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/seo-strategy</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

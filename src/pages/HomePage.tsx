@@ -2,7 +2,7 @@ import React from 'react';
 import { Search, ArrowRight, Percent, Calendar, Calculator, ArrowRightLeft, Hammer, Activity, Sparkles, TrendingUp, Clock } from 'lucide-react';
 import { CATEGORIES } from '../data/categories';
 import { CALCULATORS } from '../data/calculators';
-import { PROGRAMMATIC_PAGES } from '../data/programmaticPages';
+import { PROGRAMMATIC_PAGES, getProgrammaticHref } from '../data/programmaticPages';
 import { AdSlot } from '../components/AdSlot';
 import { RegionalLocale } from '../types/calculator';
 
@@ -239,13 +239,13 @@ export const HomePage: React.FC<HomePageProps> = ({ currentLocale, onNavigate, o
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {PROGRAMMATIC_PAGES.map((page) => (
+          {PROGRAMMATIC_PAGES.slice(0, 6).map((page) => (
             <a
               key={page.slug}
-              href={`/percentage/${page.slug}`}
+              href={getProgrammaticHref(page)}
               onClick={(e) => {
                 e.preventDefault();
-                onNavigate(`/percentage/${page.slug}`);
+                onNavigate(getProgrammaticHref(page));
               }}
               className="p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-300 hover:bg-blue-50/20 transition-all flex flex-col justify-between group"
             >

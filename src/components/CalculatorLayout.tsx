@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Share2, Copy, Check, RotateCcw, ChevronDown, ChevronUp, ArrowRight, Bookmark } from 'lucide-react';
-import { CalculatorDefinition, RegionalLocale } from '../types/calculator';
+import { CalculatorDefinition, RegionalLocale, TeamMember } from '../types/calculator';
 import { Breadcrumbs } from './Breadcrumbs';
 import { AdSlot } from './AdSlot';
 import { CALCULATORS } from '../data/calculators';
@@ -13,6 +13,11 @@ interface CalculatorLayoutProps {
   children: React.ReactNode;
   onReset?: () => void;
   lastResultSummary?: string;
+  author?: TeamMember;
+  reviewer?: TeamMember;
+  datePublished?: string;
+  dateUpdated?: string;
+  definition?: string;
 }
 
 export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
@@ -21,7 +26,12 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
   onNavigate,
   children,
   onReset,
-  lastResultSummary
+  lastResultSummary,
+  author,
+  reviewer,
+  datePublished,
+  dateUpdated,
+  definition
 }) => {
   const [copied, setCopied] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -105,9 +115,28 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
             </div>
 
             {/* Short introduction addressing the exact search intent */}
-            <p className="text-xs sm:text-sm text-slate-600 leading-snug line-clamp-1 sm:line-clamp-none max-w-3xl">
-              {calculator.summary}
+            <p className="calculator-direct-answer text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
+              {definition || calculator.summary}
             </p>
+            {(author || dateUpdated) && (
+              <p className="text-[11px] sm:text-xs text-slate-500 max-w-3xl">
+                {author && (
+                  <span>
+                    By <span className="font-semibold text-slate-700">{author.name}</span>
+                    <span className="text-slate-400"> ({author.role})</span>
+                  </span>
+                )}
+                {author && reviewer && <span> · Reviewed by <span className="font-semibold text-slate-700">{reviewer.name}</span></span>}
+                {dateUpdated && (
+                  <span className="block sm:inline sm:before:content-['·_']">
+                    Updated <time dateTime={dateUpdated}>{dateUpdated}</time>
+                    {datePublished && (
+                      <span> · Published <time dateTime={datePublished}>{datePublished}</time></span>
+                    )}
+                  </span>
+                )}
+              </p>
+            )}
           </div>
 
           {/* Core Interactive Calculator Card - HIGH ON MOBILE VIEWPORT */}
@@ -127,7 +156,7 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
           {/* Section: How it Works */}
           <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
             <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span>How the {calculator.shortName} Calculator Works</span>
+              <span>How Does the {calculator.shortName} Calculator Work?</span>
             </h2>
             <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
               <ol className="list-decimal pl-5 space-y-2 marker:text-blue-600 marker:font-semibold">
@@ -143,7 +172,7 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
           {/* Section: Formula Explanation */}
           <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
             <h2 className="text-lg font-bold text-slate-900">
-              Mathematical Formula
+              What Is the {calculator.shortName} Formula?
             </h2>
             <div className="p-4 bg-slate-50 border border-slate-200 rounded-xl font-mono text-sm sm:text-base text-slate-900 font-semibold text-center overflow-x-auto select-all">
               {calculator.formula.expression}
@@ -173,7 +202,7 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
           <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-bold text-slate-900">
-                Step-by-Step Example
+                How Do You Calculate {calculator.shortName} Step by Step?
               </h2>
               <span className="text-xs text-slate-500 font-medium">
                 {calculator.example.scenario}
@@ -203,11 +232,49 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
             </div>
           </section>
 
+          {/* Section: Comparison Table (table-snippet eligible) */}
+          {calculator.comparisonTable && (
+            <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
+              <h2 className="text-lg font-bold text-slate-900">
+                {calculator.comparisonTable.title}
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs sm:text-sm border-collapse">
+                  {calculator.comparisonTable.caption && (
+                    <caption className="text-left text-xs text-slate-500 pb-2">
+                      {calculator.comparisonTable.caption}
+                    </caption>
+                  )}
+                  <thead>
+                    <tr className="bg-slate-50">
+                      {calculator.comparisonTable.headers.map((h, i) => (
+                        <th key={i} scope="col" className="text-left font-bold text-slate-900 border border-slate-200 px-3 py-2">
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {calculator.comparisonTable.rows.map((row, i) => (
+                      <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/60'}>
+                        {row.map((cellValue, j) => (
+                          <td key={j} className="border border-slate-200 px-3 py-2 text-slate-700">
+                            {cellValue}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          )}
+
           {/* Section: Frequently Asked Questions (FAQ Accordion with Schema support) */}
           {calculator.faqs.length > 0 && (
             <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
               <h2 className="text-lg font-bold text-slate-900">
-                Frequently Asked Questions
+                {calculator.shortName} Questions and Answers
               </h2>
               <div className="space-y-3">
                 {calculator.faqs.map((faq, index) => {
@@ -230,7 +297,7 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
                         )}
                       </button>
                       {isOpen && (
-                        <div className="px-4 py-3 text-xs sm:text-sm text-slate-600 bg-white leading-relaxed border-t border-slate-100">
+                        <div className="faq-answer px-4 py-3 text-xs sm:text-sm text-slate-600 bg-white leading-relaxed border-t border-slate-100">
                           {faq.answer}
                         </div>
                       )}
@@ -238,6 +305,29 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
                   );
                 })}
               </div>
+            </section>
+          )}
+
+          {/* Section: Sources & References */}
+          {calculator.sources && calculator.sources.length > 0 && (
+            <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-3">
+              <h2 className="text-lg font-bold text-slate-900">
+                Where Do These {calculator.shortName} Standards Come From?
+              </h2>
+              <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm text-slate-600">
+                {calculator.sources.map((s, i) => (
+                  <li key={i}>
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 hover:underline font-medium"
+                    >
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </section>
           )}
 

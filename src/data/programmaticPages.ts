@@ -1,6 +1,9 @@
 import { ProgrammaticPageDefinition } from '../types/calculator';
+import { BULK_PROGRAMMATIC_PAGES } from './programmaticBulk';
 
-export const PROGRAMMATIC_PAGES: ProgrammaticPageDefinition[] = [
+export { getProgrammaticHref } from './programmaticBulk';
+
+const BASE_PROGRAMMATIC_PAGES: ProgrammaticPageDefinition[] = [
   {
     slug: '20-percent-of-150',
     calculatorId: 'percentage-calculator',
@@ -148,6 +151,11 @@ export const PROGRAMMATIC_PAGES: ProgrammaticPageDefinition[] = [
       { title: 'Days Between Dates', href: '/calculators/days-between-dates' }
     ]
   }
+];
+
+export const PROGRAMMATIC_PAGES: ProgrammaticPageDefinition[] = [
+  ...BASE_PROGRAMMATIC_PAGES,
+  ...BULK_PROGRAMMATIC_PAGES
 ];
 
 export function getProgrammaticPageBySlug(slug: string): ProgrammaticPageDefinition | undefined {

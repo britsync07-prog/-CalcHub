@@ -19,6 +19,26 @@ export interface CalculationStep {
   value: string;
 }
 
+export interface Source {
+  label: string;
+  url: string;
+}
+
+export interface ComparisonTable {
+  title: string;
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  credentials: string;
+  bio: string;
+}
+
 export interface CalculatorDefinition {
   id: string;
   slug: string; // e.g. "percentage-calculator"
@@ -30,6 +50,18 @@ export interface CalculatorDefinition {
   metaDescription: string;
   h1: string;
   summary: string;
+  /** One-sentence "X is..." definition for featured-snippet / AI extraction. Optional: falls back to generated text. */
+  definition?: string;
+  /** ISO date strings. Optional: enrichment defaults apply. */
+  datePublished?: string;
+  dateUpdated?: string;
+  /** Editorial team member ids. Optional: enrichment defaults apply. */
+  authorId?: string;
+  reviewerId?: string;
+  /** External authoritative references. Optional: enrichment defaults apply. */
+  sources?: Source[];
+  /** Comparison table rendered as a real <table>. Optional. */
+  comparisonTable?: ComparisonTable;
   searchKeywords: string[];
   formula: {
     expression: string;
@@ -77,6 +109,9 @@ export interface ProgrammaticPageDefinition {
   resultSummary: string;
   breadcrumbs: { name: string; href: string }[];
   relatedPages: { title: string; href: string }[];
+  faqs?: FAQItem[];
+  datePublished?: string;
+  dateUpdated?: string;
 }
 
 export interface CalculationHistoryItem {

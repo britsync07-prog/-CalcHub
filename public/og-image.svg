@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" rx="0" fill="#1e293b"/>
+  <rect x="80" y="150" width="120" height="120" rx="24" fill="#2563eb"/>
+  <text x="140" y="238" font-family="monospace" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle">∑</text>
+  <text x="230" y="205" font-family="sans-serif" font-size="64" font-weight="800" fill="#ffffff">Everyday Calculator Hub</text>
+  <text x="230" y="262" font-family="sans-serif" font-size="32" fill="#93c5fd">50+ free calculators &amp; converters</text>
+  <text x="80" y="340" font-family="sans-serif" font-size="28" fill="#cbd5e1">Percentages · Tips · Dates · Fractions · Converters · DIY estimators</text>
+  <text x="80" y="390" font-family="sans-serif" font-size="28" fill="#cbd5e1">Step-by-step answers. No sign-up. Private by design.</text>
+  <rect x="80" y="440" width="260" height="64" rx="14" fill="#2563eb"/>
+  <text x="210" y="482" font-family="sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Calculate free</text>
+</svg>

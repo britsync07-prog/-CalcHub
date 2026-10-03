@@ -34,21 +34,25 @@ export const CalculatorResultCard: React.FC<CalculatorResultCardProps> = ({
     blue: {
       card: 'bg-blue-50/90 border-blue-200 text-blue-950',
       label: 'text-blue-700',
+      result: 'text-black',
       button: 'bg-white text-blue-900 border-blue-200 hover:bg-blue-100/50'
     },
     emerald: {
       card: 'bg-emerald-50/90 border-emerald-200 text-emerald-950',
       label: 'text-emerald-700',
+      result: 'text-black',
       button: 'bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-100/50'
     },
     purple: {
       card: 'bg-purple-50/90 border-purple-200 text-purple-950',
       label: 'text-purple-700',
+      result: 'text-black',
       button: 'bg-white text-purple-900 border-purple-200 hover:bg-purple-100/50'
     },
     slate: {
       card: 'bg-slate-900 border-slate-800 text-white',
       label: 'text-slate-400',
+      result: 'text-white',
       button: 'bg-slate-800 text-white border-slate-700 hover:bg-slate-700'
     }
   }[variant];
@@ -86,7 +90,7 @@ export const CalculatorResultCard: React.FC<CalculatorResultCardProps> = ({
 
       {/* Main Big Number Display */}
       <div className="overflow-x-auto no-scrollbar">
-        <div className="text-xl sm:text-2xl font-black font-mono tracking-tight tabular-nums select-all text-slate-900 dark:text-white leading-tight">
+        <div className={`text-xl sm:text-2xl font-black font-mono tracking-tight tabular-nums select-all leading-tight ${variantStyles.result}`}>
           {result}
         </div>
       </div>
@@ -104,7 +108,7 @@ export const CalculatorResultCard: React.FC<CalculatorResultCardProps> = ({
           {details.map((d, idx) => (
             <div key={idx} className="px-1.5 py-0.5 rounded bg-black/5 dark:bg-white/5 flex items-center gap-1">
               <span className="opacity-70 font-medium">{d.label}:</span>
-              <span className="font-mono font-bold text-slate-900 dark:text-white">{d.value}</span>
+              <span className={`font-mono font-bold ${variantStyles.result}`}>{d.value}</span>
             </div>
           ))}
         </div>

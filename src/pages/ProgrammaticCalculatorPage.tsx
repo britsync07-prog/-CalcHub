@@ -1,11 +1,18 @@
 import React, { useEffect } from 'react';
-import { ArrowRight, Check, Sparkles } from 'lucide-react';
-import { getProgrammaticPageBySlug } from '../data/programmaticPages';
+import { ArrowRight } from 'lucide-react';
+import { getProgrammaticPageBySlug, getProgrammaticHref } from '../data/programmaticPages';
 import { getCalculatorBySlug } from '../data/calculators';
 import { CalculatorDispatcher } from '../components/CalculatorDispatcher';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { AdSlot } from '../components/AdSlot';
-import { updateSEO, generateBreadcrumbSchema } from '../utils/seo';
+import {
+  updateSEO,
+  generateBreadcrumbSchema,
+  generateHowToSchema,
+  generateFaqSchema,
+  generateSpeakableSchema
+} from '../utils/seo';
+import { getTeamMember } from '../data/editorialTeam';
 import { RegionalLocale } from '../types/calculator';
 
 interface ProgrammaticCalculatorPageProps {
@@ -13,6 +20,9 @@ interface ProgrammaticCalculatorPageProps {
   currentLocale: RegionalLocale;
   onNavigate: (href: string) => void;
 }
+
+const FALLBACK_PUBLISHED = '2025-04-01';
+const FALLBACK_UPDATED = '2026-10-01';
 
 export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProps> = ({
   slug,
@@ -25,16 +35,32 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
   useEffect(() => {
     if (!page) return;
 
-    const canonicalPath = `/percentage/${page.slug}`;
+    const canonicalPath = getProgrammaticHref(page);
     const breadcrumbSchema = generateBreadcrumbSchema(
       page.breadcrumbs.map((b) => ({ name: b.name, url: b.href }))
     );
+    const howToSchema = generateHowToSchema({
+      name: page.h1,
+      description: page.explanation,
+      steps: page.workedSteps
+    });
+    const faqSchema = generateFaqSchema(page.faqs || []);
+    const speakableSchema = generateSpeakableSchema(['.programmatic-direct-answer', '.faq-answer']);
+    const author = getTeamMember('daniel-okoro', 'daniel-okoro');
+
+    const schemas: Record<string, unknown>[] = [breadcrumbSchema];
+    if (howToSchema) schemas.push(howToSchema);
+    if (faqSchema) schemas.push(faqSchema);
+    if (speakableSchema) schemas.push(speakableSchema);
 
     updateSEO({
       title: page.metaTitle,
       description: page.metaDescription,
       canonicalPath,
-      schema: breadcrumbSchema
+      schema: schemas,
+      publishedTime: page.datePublished || FALLBACK_PUBLISHED,
+      modifiedTime: page.dateUpdated || FALLBACK_UPDATED,
+      authorName: author.name
     });
   }, [page, slug]);
 
@@ -65,6 +91,13 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
         <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           {page.h1}
         </h1>
+        <p className="text-[11px] sm:text-xs text-slate-500">
+          By <span className="font-semibold text-slate-700">Daniel Okoro</span>
+          <span className="text-slate-400"> (Mathematics Editor)</span>
+          <span className="block sm:inline sm:before:content-['·_']">
+            Updated <time dateTime={page.dateUpdated || FALLBACK_UPDATED}>{page.dateUpdated || FALLBACK_UPDATED}</time>
+          </span>
+        </p>
 
         {/* Instant Answer Callout */}
         <div className="p-5 sm:p-6 bg-blue-50/80 border border-blue-200 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -72,7 +105,7 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
             <span className="text-xs font-semibold text-blue-700 uppercase tracking-wider">
               Exact Direct Answer
             </span>
-            <div className="text-2xl sm:text-3xl font-extrabold font-mono text-blue-950">
+            <div className="programmatic-direct-answer text-2xl sm:text-3xl font-extrabold font-mono text-blue-950">
               {page.resultSummary}
             </div>
             <p className="text-xs sm:text-sm text-blue-800 leading-relaxed pt-1">
@@ -108,7 +141,7 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
       {/* Step-by-Step Mathematical Solution */}
       <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
         <h2 className="text-lg font-bold text-slate-900">
-          How to Calculate Step-by-Step
+          How Do You Calculate {page.h1.replace(/^(What is|How Many Days Until)\s*/i, '')} Step by Step?
         </h2>
         <ol className="list-decimal pl-5 space-y-2.5 text-sm text-slate-600 leading-relaxed">
           {page.workedSteps.map((step, idx) => (
@@ -118,6 +151,23 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
           ))}
         </ol>
       </section>
+
+      {/* FAQ (bulk pages ship 3 Q&As) */}
+      {(page.faqs || []).length > 0 && (
+        <section className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-7 space-y-4">
+          <h2 className="text-lg font-bold text-slate-900">
+            {page.h1} Questions and Answers
+          </h2>
+          <div className="space-y-3">
+            {(page.faqs || []).map((faq, idx) => (
+              <div key={idx} className="border border-slate-200 rounded-xl p-4">
+                <h3 className="text-sm font-semibold text-slate-800">{faq.question}</h3>
+                <p className="faq-answer text-xs sm:text-sm text-slate-600 leading-relaxed pt-1.5">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Related Specific Calculations & Internal Linking */}
       {page.relatedPages.length > 0 && (

@@ -14,7 +14,8 @@ export const SeoStrategyPage: React.FC<SeoStrategyPageProps> = ({ onNavigate }) 
     updateSEO({
       title: 'SEO Strategy & Organic Growth Roadmap - Everyday Calculator Hub',
       description: 'Strategic blueprint for scaling organic Google traffic across Tier-1 English markets, architectural hierarchy, 100-page publishing roadmap, and ad strategy.',
-      canonicalPath: '/seo-strategy'
+      canonicalPath: '/seo-strategy',
+      noindex: true
     });
   }, []);
 

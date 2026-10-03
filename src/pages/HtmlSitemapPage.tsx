@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { CALCULATORS } from '../data/calculators';
 import { CATEGORIES } from '../data/categories';
-import { PROGRAMMATIC_PAGES } from '../data/programmaticPages';
+import { PROGRAMMATIC_PAGES, getProgrammaticHref } from '../data/programmaticPages';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { updateSEO } from '../utils/seo';
 
@@ -93,10 +93,10 @@ export const HtmlSitemapPage: React.FC<HtmlSitemapPageProps> = ({ onNavigate }) 
             {PROGRAMMATIC_PAGES.map((page) => (
               <a
                 key={page.slug}
-                href={`/percentage/${page.slug}`}
+                href={getProgrammaticHref(page)}
                 onClick={(e) => {
                   e.preventDefault();
-                  onNavigate(`/percentage/${page.slug}`);
+                  onNavigate(getProgrammaticHref(page));
                 }}
                 className="p-2 rounded-lg hover:bg-slate-50 text-slate-700 hover:text-blue-600 flex items-center justify-between transition-colors"
               >

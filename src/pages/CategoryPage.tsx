@@ -31,7 +31,9 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ categorySlug, onNavi
       title,
       description,
       canonicalPath,
-      schema: breadcrumbSchema
+      schema: breadcrumbSchema,
+      publishedTime: '2025-02-10',
+      modifiedTime: '2026-10-01'
     });
   }, [category, categorySlug]);
 
@@ -67,8 +69,12 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ categorySlug, onNavi
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           {category.name} Calculators
         </h1>
-        <p className="text-base text-slate-600 leading-relaxed">
+        <p className="calculator-direct-answer text-base text-slate-600 leading-relaxed">
           {category.heroText}
+        </p>
+        <p className="text-[11px] sm:text-xs text-slate-500">
+          Updated <time dateTime="2026-10-01">2026-10-01</time>
+          <span> · Published <time dateTime="2025-02-10">2025-02-10</time></span>
         </p>
       </div>
 
@@ -122,11 +128,14 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ categorySlug, onNavi
 
       {/* Bottom informational authority text */}
       <div className="p-6 bg-slate-100/70 border border-slate-200 rounded-2xl space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed max-w-4xl">
-        <h3 className="font-bold text-slate-900 text-sm sm:text-base">
-          About our {category.name} Calculation Suite
-        </h3>
+        <h2 className="font-bold text-slate-900 text-sm sm:text-base">
+          What Tools Are in the {category.name} Calculation Suite?
+        </h2>
         <p>
           Every tool in our {category.name} cluster is designed for swift, unhindered problem solving. Whether you are browsing on a mobile phone during a shopping trip or balancing numbers on a desktop workstation, our calculators deliver instant results with step-by-step mathematical explanations.
+        </p>
+        <p>
+          Each {category.name.toLowerCase()} calculator above shows its formula, a worked example with real numbers, and answers to frequently asked questions, so you can verify every result by hand.
         </p>
       </div>
     </div>

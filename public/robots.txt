@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 
+# AI search and answer-engine crawlers are welcome on public pages.
+# See AI usage notes at https://everydaycalculatorhub.com/llms.txt
+
 # Canonical XML Sitemap
 Sitemap: https://everydaycalculatorhub.com/sitemap.xml

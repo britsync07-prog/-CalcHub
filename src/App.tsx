@@ -11,12 +11,18 @@ import { ProgrammaticCalculatorPage } from './pages/ProgrammaticCalculatorPage';
 import { TrustPages } from './pages/TrustPages';
 import { HtmlSitemapPage } from './pages/HtmlSitemapPage';
 import { SeoStrategyPage } from './pages/SeoStrategyPage';
+import { BlogHubPage } from './pages/BlogHubPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 import { RegionalLocale } from './types/calculator';
 import { updateSEO } from './utils/seo';
 
-export function App() {
+export interface AppProps {
+  initialPath?: string;
+}
+
+export const App: React.FC<AppProps> = ({ initialPath }) => {
   const [currentPath, setCurrentPath] = useState<string>(
-    typeof window !== 'undefined' ? window.location.pathname : '/'
+    initialPath || (typeof window !== 'undefined' ? window.location.pathname : '/')
   );
   const [currentLocale, setCurrentLocale] = useState<RegionalLocale>('US');
   const [searchOpen, setSearchOpen] = useState(false);
@@ -82,9 +88,12 @@ export function App() {
       return <AllCalculatorsPage onNavigate={handleNavigate} />;
     }
 
-    // 3. Calculator Details: /calculators/:slug
-    if (currentPath.startsWith('/calculators/')) {
-      const slug = currentPath.replace('/calculators/', '').replace(/\/$/, '');
+    // 3. Calculator Details: /calculators/:slug or rival alias /tools/:slug
+    if (currentPath.startsWith('/calculators/') || currentPath.startsWith('/tools/')) {
+      const slug = currentPath
+        .replace('/calculators/', '')
+        .replace('/tools/', '')
+        .replace(/\/$/, '');
       return (
         <CalculatorDetailPage
           slug={slug}
@@ -92,6 +101,15 @@ export function App() {
           onNavigate={handleNavigate}
         />
       );
+    }
+
+    // 3b. Blog & Editorial Guides: /blog or /blog/:slug
+    if (currentPath === '/blog' || currentPath === '/blog/') {
+      return <BlogHubPage onNavigate={handleNavigate} />;
+    }
+    if (currentPath.startsWith('/blog/')) {
+      const slug = currentPath.replace('/blog/', '').replace(/\/$/, '');
+      return <BlogPostPage slug={slug} onNavigate={handleNavigate} />;
     }
 
     // 4. Category Pages: /category/:slug
@@ -127,17 +145,17 @@ export function App() {
       );
     }
 
-    // 6. Trust & Informational Pages
+    // 6. Trust & Informational Pages (with rival alias support /privacy and /terms)
     if (currentPath === '/about') {
       return <TrustPages type="about" onNavigate={handleNavigate} />;
     }
     if (currentPath === '/contact') {
       return <TrustPages type="contact" onNavigate={handleNavigate} />;
     }
-    if (currentPath === '/privacy-policy') {
+    if (currentPath === '/privacy-policy' || currentPath === '/privacy') {
       return <TrustPages type="privacy" onNavigate={handleNavigate} />;
     }
-    if (currentPath === '/terms-of-use') {
+    if (currentPath === '/terms-of-use' || currentPath === '/terms') {
       return <TrustPages type="terms" onNavigate={handleNavigate} />;
     }
     if (currentPath === '/disclaimer') {

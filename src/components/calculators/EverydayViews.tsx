@@ -832,3 +832,201 @@ export const InterestCalculatorView: React.FC<BaseCalculatorProps> = ({ id, name
     </div>
   );
 };
+
+// 8. Fuel Cost Calculator (Road Trip Gas, Mileage & Group Split)
+export const FuelCostCalculatorView: React.FC<BaseCalculatorProps> = ({ id, name, locale }) => {
+  const [unitSystem, setUnitSystem] = useState<'US' | 'Metric' | 'UK'>('US');
+  const [roundTrip, setRoundTrip] = useState(false);
+
+  const calc = useCalculatorInput(
+    {
+      distance: '300',
+      economy: '30',
+      price: '3.50',
+      passengers: '1'
+    },
+    ['distance', 'economy', 'price', 'passengers']
+  );
+
+  const rawDistance = safeParseFloat(calc.values.distance) || 0;
+  const effectiveDistance = rawDistance * (roundTrip ? 2 : 1);
+  const economy = safeParseFloat(calc.values.economy) || 0;
+  const price = safeParseFloat(calc.values.price) || 0;
+  const passengers = Math.max(1, parseInt(calc.values.passengers, 10) || 1);
+
+  let fuelVolume = 0;
+  let totalCost = 0;
+
+  if (unitSystem === 'US') {
+    fuelVolume = economy > 0 ? effectiveDistance / economy : 0;
+    totalCost = fuelVolume * price;
+  } else if (unitSystem === 'Metric') {
+    fuelVolume = (effectiveDistance / 100) * economy;
+    totalCost = fuelVolume * price;
+  } else {
+    // UK Imperial MPG with fuel priced per Litre
+    const ukGallons = economy > 0 ? effectiveDistance / economy : 0;
+    fuelVolume = ukGallons * 4.54609; // Litres
+    totalCost = fuelVolume * price;
+  }
+
+  const costPerUnit = effectiveDistance > 0 ? totalCost / effectiveDistance : 0;
+  const costPerPerson = passengers > 0 ? totalCost / passengers : totalCost;
+
+  const setVehiclePreset = (mpgUS: number, l100km: number, mpgUK: number) => {
+    if (unitSystem === 'US') calc.setFieldValue('economy', String(mpgUS));
+    else if (unitSystem === 'Metric') calc.setFieldValue('economy', String(l100km));
+    else calc.setFieldValue('economy', String(mpgUK));
+  };
+
+  const setDistancePreset = (dMiles: number, dKm: number) => {
+    calc.setFieldValue('distance', String(unitSystem === 'Metric' ? dKm : dMiles));
+  };
+
+  return (
+    <div className="space-y-4 max-w-lg mx-auto">
+      {/* Unit & Trip Settings */}
+      <div className="flex flex-wrap items-center justify-between gap-1 p-1.5 bg-slate-100 rounded-xl text-xs">
+        <div className="flex items-center gap-1">
+          <span className="font-bold text-slate-600 uppercase text-[10px] pl-1">Units:</span>
+          {(['US', 'Metric', 'UK'] as const).map((sys) => (
+            <button
+              key={sys}
+              type="button"
+              onClick={() => {
+                setUnitSystem(sys);
+                if (sys === 'Metric') {
+                  calc.setFieldValue('distance', '480');
+                  calc.setFieldValue('economy', '7.8');
+                  calc.setFieldValue('price', '1.65');
+                } else if (sys === 'UK') {
+                  calc.setFieldValue('distance', '300');
+                  calc.setFieldValue('economy', '36');
+                  calc.setFieldValue('price', '1.45');
+                } else {
+                  calc.setFieldValue('distance', '300');
+                  calc.setFieldValue('economy', '30');
+                  calc.setFieldValue('price', '3.50');
+                }
+              }}
+              className={`px-2 py-0.5 rounded text-xs font-bold transition-all cursor-pointer ${
+                unitSystem === sys
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'bg-white text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              {sys === 'US' ? 'US (MPG, $)' : sys === 'Metric' ? 'Metric (L/100km, km)' : 'UK (Imp MPG, £)'}
+            </button>
+          ))}
+        </div>
+
+        {/* Round Trip Toggle */}
+        <button
+          type="button"
+          onClick={() => setRoundTrip(!roundTrip)}
+          className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer border ${
+            roundTrip
+              ? 'bg-emerald-600 text-white border-emerald-600'
+              : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+          }`}
+        >
+          {roundTrip ? '✓ Round Trip (2x)' : '+ Round Trip'}
+        </button>
+      </div>
+
+      {/* Vehicle Economy Presets */}
+      <div className="flex flex-wrap gap-1.5 text-xs">
+        <span className="text-slate-400 font-medium self-center text-[11px] mr-1">Vehicle:</span>
+        <button type="button" onClick={() => setVehiclePreset(32, 7.3, 38)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">Sedan</button>
+        <button type="button" onClick={() => setVehiclePreset(24, 9.8, 29)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">SUV</button>
+        <button type="button" onClick={() => setVehiclePreset(18, 13.0, 22)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">Truck</button>
+        <button type="button" onClick={() => setVehiclePreset(50, 4.7, 60)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700 font-medium text-emerald-600">Hybrid</button>
+      </div>
+
+      {/* Quick Distance Presets */}
+      <div className="flex flex-wrap gap-1.5 text-xs">
+        <span className="text-slate-400 font-medium self-center text-[11px] mr-1">Distance:</span>
+        <button type="button" onClick={() => setDistancePreset(50, 80)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">50 mi</button>
+        <button type="button" onClick={() => setDistancePreset(150, 240)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">150 mi</button>
+        <button type="button" onClick={() => setDistancePreset(300, 480)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">300 mi</button>
+        <button type="button" onClick={() => setDistancePreset(600, 960)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">600 mi</button>
+      </div>
+
+      {/* Inputs Grid */}
+      <div className="grid grid-cols-2 gap-2">
+        <CalculatorField
+          label={`Distance (${unitSystem === 'Metric' ? 'km' : 'miles'})`}
+          value={calc.values.distance}
+          isActive={calc.activeField === 'distance'}
+          onSelect={() => calc.setActiveField('distance')}
+          suffix={unitSystem === 'Metric' ? 'km' : 'mi'}
+          placeholder="300"
+        />
+        <CalculatorField
+          label={unitSystem === 'Metric' ? 'Consumption (L/100km)' : 'Fuel Economy (MPG)'}
+          value={calc.values.economy}
+          isActive={calc.activeField === 'economy'}
+          onSelect={() => calc.setActiveField('economy')}
+          suffix={unitSystem === 'Metric' ? 'L/100km' : 'MPG'}
+          placeholder="30"
+        />
+        <CalculatorField
+          label={`Fuel Price (${unitSystem === 'Metric' ? 'per Liter' : unitSystem === 'UK' ? '£ per Liter' : 'per Gallon'})`}
+          value={calc.values.price}
+          isActive={calc.activeField === 'price'}
+          onSelect={() => calc.setActiveField('price')}
+          prefix={unitSystem === 'UK' ? '£' : '$'}
+          placeholder="3.50"
+        />
+        <CalculatorField
+          label="Passengers (Split)"
+          value={calc.values.passengers}
+          isActive={calc.activeField === 'passengers'}
+          onSelect={() => calc.setActiveField('passengers')}
+          suffix="people"
+          placeholder="1"
+        />
+      </div>
+
+      {/* Results Cards */}
+      <div className="grid grid-cols-2 gap-2">
+        <CalculatorResultCard
+          label="TOTAL FUEL COST"
+          result={formatCurrency(totalCost, locale)}
+          subtext={roundTrip ? `Round trip (${effectiveDistance} ${unitSystem === 'Metric' ? 'km' : 'mi'})` : `One-way (${effectiveDistance} ${unitSystem === 'Metric' ? 'km' : 'mi'})`}
+          variant="blue"
+        />
+        <CalculatorResultCard
+          label="COST PER PASSENGER"
+          result={formatCurrency(costPerPerson, locale)}
+          subtext={`Split among ${passengers} traveler${passengers > 1 ? 's' : ''}`}
+          variant="emerald"
+        />
+        <CalculatorResultCard
+          label="FUEL NEEDED"
+          result={`${formatNumber(fuelVolume, { decimals: 2 })} ${unitSystem === 'US' ? 'Gallons' : 'Litres'}`}
+          variant="purple"
+        />
+        <CalculatorResultCard
+          label={unitSystem === 'Metric' ? 'COST PER KM' : 'COST PER MILE'}
+          result={formatCurrency(costPerUnit, locale)}
+          variant="slate"
+        />
+      </div>
+
+      {/* Keypad */}
+      <div className="bg-slate-50/80 p-2 sm:p-3 rounded-2xl border border-slate-200">
+        <CalculatorKeypad
+          onDigit={calc.handleDigit}
+          onDecimal={calc.handleDecimal}
+          onBackspace={calc.handleBackspace}
+          onClear={calc.handleClearAll}
+          onClearActive={calc.handleClear}
+          onNextField={calc.handleNextField}
+          showNextButton={true}
+        />
+      </div>
+    </div>
+  );
+};
+

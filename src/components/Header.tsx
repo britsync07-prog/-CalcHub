@@ -25,8 +25,8 @@ export const Header: React.FC<HeaderProps> = ({
     { label: 'Date & Time', href: '/category/date-time' },
     { label: 'Math & Stats', href: '/category/math-stats' },
     { label: 'Converters', href: '/category/converters' },
-    { label: 'Home & DIY', href: '/category/home-improvement' },
-    { label: 'All 50+ Tools', href: '/all-calculators' },
+    { label: 'Guides', href: '/blog' },
+    { label: 'All 55+ Tools', href: '/all-calculators' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent, href: string) => {

@@ -7,7 +7,8 @@ import {
   SalesTaxCalculatorView,
   ProfitMarginCalculatorView,
   HourlySalaryCalculatorView,
-  InterestCalculatorView
+  InterestCalculatorView,
+  FuelCostCalculatorView
 } from './calculators/EverydayViews';
 import {
   DaysBetweenDatesView,
@@ -15,7 +16,8 @@ import {
   BusinessDaysCalculatorView,
   DaysFromTodayView,
   TimeDurationCalculatorView,
-  CountdownCalculatorView
+  CountdownCalculatorView,
+  TimeZonePlannerView
 } from './calculators/DateTimeViews';
 import {
   ScientificCalculatorView,
@@ -27,7 +29,8 @@ import {
   LengthConverterView,
   WeightConverterView,
   TemperatureConverterView,
-  SpeedConverterView
+  SpeedConverterView,
+  OvenTemperatureConverterView
 } from './calculators/ConverterViews';
 import {
   SquareFootageCalculatorView,
@@ -74,6 +77,9 @@ export const CalculatorDispatcher: React.FC<CalculatorDispatcherProps> = ({
   if (['simple-interest-calculator', 'compound-interest-calculator'].includes(slug)) {
     return <InterestCalculatorView id={calculator.id} name={calculator.name} locale={locale} />;
   }
+  if (slug === 'fuel-cost-calculator') {
+    return <FuelCostCalculatorView id={calculator.id} name={calculator.name} locale={locale} />;
+  }
 
   // Date & Time
   if (['days-between-dates', 'date-difference-calculator', 'week-number-calculator'].includes(slug)) {
@@ -93,6 +99,9 @@ export const CalculatorDispatcher: React.FC<CalculatorDispatcherProps> = ({
   }
   if (slug === 'countdown-calculator') {
     return <CountdownCalculatorView id={calculator.id} name={calculator.name} locale={locale} initialInputs={initialInputs} />;
+  }
+  if (slug === 'time-zone-planner') {
+    return <TimeZonePlannerView id={calculator.id} name={calculator.name} locale={locale} />;
   }
 
   // Math & Statistics
@@ -118,6 +127,9 @@ export const CalculatorDispatcher: React.FC<CalculatorDispatcherProps> = ({
   }
   if (slug === 'temperature-converter') {
     return <TemperatureConverterView id={calculator.id} name={calculator.name} locale={locale} />;
+  }
+  if (slug === 'oven-temperature-converter') {
+    return <OvenTemperatureConverterView id={calculator.id} name={calculator.name} locale={locale} />;
   }
   if (['speed-converter', 'fuel-economy-converter'].includes(slug)) {
     return <SpeedConverterView id={calculator.id} name={calculator.name} locale={locale} />;

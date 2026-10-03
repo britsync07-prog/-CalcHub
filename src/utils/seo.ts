@@ -261,3 +261,50 @@ export function withArticleDates(
   if (author) out.author = generateAuthorSchema(author);
   return out;
 }
+
+export function generateBlogPostingSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  dateModified,
+  authorName,
+  wordCount,
+  image
+}: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified: string;
+  authorName: string;
+  wordCount?: number;
+  image?: string;
+}) {
+  const origin = siteOrigin();
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    url: url.startsWith('http') ? url : `${origin}${url}`,
+    datePublished,
+    dateModified,
+    wordCount: wordCount || 1000,
+    author: {
+      '@type': 'Person',
+      name: authorName
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Everyday Calculator Hub',
+      url: origin,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${origin}/og-image.svg`
+      }
+    },
+    image: image ? (image.startsWith('http') ? image : `${origin}${image}`) : `${origin}/og-image.svg`
+  };
+}
+

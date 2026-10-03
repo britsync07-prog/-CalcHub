@@ -57,7 +57,10 @@ export const DEFINITIONS: Record<string, string> = {
   'running-pace-calculator': 'A running pace calculator converts finish time and distance into per-mile and per-kilometre pace for 5K to marathon races.',
   'walking-steps-to-distance-calories': 'A steps converter turns step counts into miles, kilometres, and estimated active calories using stride length and body weight.',
   'daily-water-intake-calculator': 'A water intake calculator estimates daily fluid ounces and litres from body weight plus workout time.',
-  'body-mass-index-calculator': 'A BMI calculator divides weight by height squared and maps the result to WHO adult reference bands.'
+  'body-mass-index-calculator': 'A BMI calculator divides weight by height squared and maps the result to WHO adult reference bands.',
+  'oven-temperature-converter': 'An oven temperature converter converts cooking temperatures between Fahrenheit, Celsius, Fan-forced convection, and British Gas Marks with exact baking adjustments.',
+  'fuel-cost-calculator': 'A fuel cost calculator calculates total trip fuel expenses, cost per mile, and cost per passenger based on distance, vehicle fuel economy, and gas price.',
+  'time-zone-planner': 'A time zone planner compares hours across global cities simultaneously to identify overlapping normal working hours for cross-border meetings.'
 };
 
 /** Extra FAQs merged after each calculator's built-in FAQs (5-8 total on key pages). */

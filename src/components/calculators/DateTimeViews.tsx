@@ -520,3 +520,234 @@ export const CountdownCalculatorView: React.FC<BaseCalculatorProps> = ({ id, nam
     </div>
   );
 };
+
+// 7. Time Zone Planner (Interactive Multi-City Meeting Planner & Overlap Matrix)
+export const TimeZonePlannerView: React.FC<BaseCalculatorProps> = ({ id, name, locale }) => {
+  const CITIES = [
+    { id: 'nyc', name: 'New York (EDT/EST)', offset: -5, tz: 'America/New_York' },
+    { id: 'sfo', name: 'San Francisco (PDT/PST)', offset: -8, tz: 'America/Los_Angeles' },
+    { id: 'chi', name: 'Chicago (CDT/CST)', offset: -6, tz: 'America/Chicago' },
+    { id: 'lon', name: 'London (BST/GMT)', offset: 0, tz: 'Europe/London' },
+    { id: 'par', name: 'Paris / Berlin (CEST/CET)', offset: 1, tz: 'Europe/Paris' },
+    { id: 'dxb', name: 'Dubai (GST)', offset: 4, tz: 'Asia/Dubai' },
+    { id: 'sin', name: 'Singapore / HK (SGT/HKT)', offset: 8, tz: 'Asia/Singapore' },
+    { id: 'tyo', name: 'Tokyo (JST)', offset: 9, tz: 'Asia/Tokyo' },
+    { id: 'syd', name: 'Sydney (AEST/AEDT)', offset: 10, tz: 'Australia/Sydney' }
+  ];
+
+  const [baseCityId, setBaseCityId] = useState('nyc');
+  const [targetCityId, setTargetCityId] = useState('lon');
+  const [selectedHour, setSelectedHour] = useState(10); // 10 AM
+
+  const baseCity = CITIES.find((c) => c.id === baseCityId) || CITIES[0];
+  const targetCity = CITIES.find((c) => c.id === targetCityId) || CITIES[3];
+
+  const diffHours = targetCity.offset - baseCity.offset;
+  const targetHour = (selectedHour + diffHours + 24) % 24;
+
+  const formatHour = (h: number) => {
+    const period = h >= 12 ? 'PM' : 'AM';
+    const displayH = h % 12 === 0 ? 12 : h % 12;
+    return `${displayH}:00 ${period}`;
+  };
+
+  const getHourStatus = (h: number) => {
+    if (h >= 9 && h <= 17) return 'work';
+    if ((h >= 7 && h < 9) || (h > 17 && h <= 21)) return 'awake';
+    return 'sleep';
+  };
+
+  // Find all mutual working hours (9am to 5pm in both cities)
+  const overlappingHours: number[] = [];
+  for (let h = 0; h < 24; h++) {
+    const tH = (h + diffHours + 24) % 24;
+    if (getHourStatus(h) === 'work' && getHourStatus(tH) === 'work') {
+      overlappingHours.push(h);
+    }
+  }
+
+  const applyPairPreset = (bId: string, tId: string, defaultH: number) => {
+    setBaseCityId(bId);
+    setTargetCityId(tId);
+    setSelectedHour(defaultH);
+  };
+
+  return (
+    <div className="space-y-4 max-w-lg mx-auto">
+      {/* Quick Pair Presets */}
+      <div className="flex flex-wrap gap-1.5 text-xs">
+        <span className="text-slate-400 font-medium self-center text-[11px] mr-1">Corridors:</span>
+        <button type="button" onClick={() => applyPairPreset('nyc', 'lon', 10)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">NY ↔ London</button>
+        <button type="button" onClick={() => applyPairPreset('sfo', 'lon', 9)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">SF ↔ London</button>
+        <button type="button" onClick={() => applyPairPreset('sfo', 'tyo', 16)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">SF ↔ Tokyo</button>
+        <button type="button" onClick={() => applyPairPreset('lon', 'syd', 8)} className="px-2 py-0.5 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-700">London ↔ Sydney</button>
+      </div>
+
+      {/* City Selectors */}
+      <div className="grid grid-cols-2 gap-2">
+        <div className="space-y-1">
+          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">Your Base City</label>
+          <select
+            value={baseCityId}
+            onChange={(e) => setBaseCityId(e.target.value)}
+            className="w-full bg-white border border-slate-300 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-800 shadow-sm focus:border-blue-500 focus:outline-none"
+          >
+            {CITIES.map((c) => (
+              <option key={c.id} value={c.id} disabled={c.id === targetCityId}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <div className="space-y-1">
+          <label className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">Target City</label>
+          <select
+            value={targetCityId}
+            onChange={(e) => setTargetCityId(e.target.value)}
+            className="w-full bg-white border border-slate-300 rounded-xl px-2.5 py-2 text-xs font-semibold text-slate-800 shadow-sm focus:border-blue-500 focus:outline-none"
+          >
+            {CITIES.map((c) => (
+              <option key={c.id} value={c.id} disabled={c.id === baseCityId}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      {/* Selected Time Slider */}
+      <div className="p-3 bg-white border border-slate-200 rounded-2xl shadow-sm space-y-2">
+        <div className="flex justify-between items-center text-xs">
+          <span className="font-bold text-slate-600">Select Meeting Time:</span>
+          <span className="font-extrabold text-blue-600 font-mono text-sm bg-blue-50 px-2 py-0.5 rounded-lg border border-blue-200">
+            {formatHour(selectedHour)} ({baseCity.name.split(' ')[0]})
+          </span>
+        </div>
+        <input
+          type="range"
+          min="0"
+          max="23"
+          step="1"
+          value={selectedHour}
+          onChange={(e) => setSelectedHour(parseInt(e.target.value, 10))}
+          className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+        />
+        <div className="flex justify-between text-[10px] text-slate-400 font-mono">
+          <span>12 AM</span>
+          <span>6 AM</span>
+          <span>12 PM</span>
+          <span>6 PM</span>
+          <span>11 PM</span>
+        </div>
+      </div>
+
+      {/* Paired Result Display Cards */}
+      <div className="grid grid-cols-2 gap-2">
+        <CalculatorResultCard
+          label={`${baseCity.name.split(' ')[0].toUpperCase()} TIME`}
+          result={formatHour(selectedHour)}
+          subtext={getHourStatus(selectedHour) === 'work' ? '🟢 Business hours' : getHourStatus(selectedHour) === 'awake' ? '🟡 Early / Evening' : '🌙 Sleeping hours'}
+          variant="blue"
+        />
+        <CalculatorResultCard
+          label={`${targetCity.name.split(' ')[0].toUpperCase()} TIME`}
+          result={formatHour(targetHour)}
+          subtext={getHourStatus(targetHour) === 'work' ? '🟢 Business hours' : getHourStatus(targetHour) === 'awake' ? '🟡 Early / Evening' : '🌙 Sleeping hours'}
+          variant={getHourStatus(targetHour) === 'work' ? 'emerald' : getHourStatus(targetHour) === 'awake' ? 'slate' : 'purple'}
+        />
+      </div>
+
+      {/* Mutual Business Hours Recommendation */}
+      <div className="p-3.5 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/70 rounded-2xl text-xs space-y-1">
+        <div className="font-bold text-blue-900 flex items-center gap-1.5">
+          <span>💡 Recommended Meeting Window</span>
+        </div>
+        {overlappingHours.length > 0 ? (
+          <p className="text-slate-700 leading-relaxed">
+            Mutual 9 AM–5 PM overlap exists between{' '}
+            <strong className="text-blue-800">
+              {formatHour(overlappingHours[0])} – {formatHour(overlappingHours[overlappingHours.length - 1] + 1)} ({baseCity.name.split(' ')[0]})
+            </strong>{' '}
+            which corresponds to{' '}
+            <strong className="text-indigo-800">
+              {formatHour((overlappingHours[0] + diffHours + 24) % 24)} – {formatHour(((overlappingHours[overlappingHours.length - 1] + diffHours + 24) % 24) + 1)} ({targetCity.name.split(' ')[0]})
+            </strong>.
+          </p>
+        ) : (
+          <p className="text-amber-800 leading-relaxed">
+            No standard 9 AM–5 PM overlap. A compromise call can be scheduled at{' '}
+            <strong>{formatHour(selectedHour)} ({baseCity.name.split(' ')[0]})</strong>, which is{' '}
+            <strong>{formatHour(targetHour)} ({targetCity.name.split(' ')[0]})</strong>.
+          </p>
+        )}
+      </div>
+
+      {/* 24-Hour Visual Heatmap Matrix */}
+      <div className="p-3 bg-white border border-slate-200 rounded-2xl shadow-sm text-xs space-y-2">
+        <div className="flex justify-between items-center">
+          <span className="font-bold text-slate-700">24-Hour Schedule Matrix</span>
+          <div className="flex gap-2 text-[10px]">
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>Work</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-amber-400 inline-block"></span>Awake</span>
+            <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-slate-300 inline-block"></span>Sleep</span>
+          </div>
+        </div>
+
+        {/* Base City Row */}
+        <div className="space-y-1">
+          <div className="text-[11px] font-semibold text-slate-600 flex justify-between">
+            <span>{baseCity.name.split(' ')[0]} (UTC{baseCity.offset >= 0 ? `+${baseCity.offset}` : baseCity.offset})</span>
+          </div>
+          <div className="grid gap-0.5 h-6 rounded-lg overflow-hidden border border-slate-200" style={{ gridTemplateColumns: 'repeat(24, minmax(0, 1fr))' }}>
+            {Array.from({ length: 24 }).map((_, h) => {
+              const status = getHourStatus(h);
+              const isSelected = h === selectedHour;
+              return (
+                <button
+                  key={h}
+                  type="button"
+                  onClick={() => setSelectedHour(h)}
+                  title={`${baseCity.name.split(' ')[0]}: ${formatHour(h)}`}
+                  className={`h-full transition-all cursor-pointer ${
+                    isSelected ? 'ring-2 ring-blue-600 z-10 scale-110' : ''
+                  } ${
+                    status === 'work' ? 'bg-emerald-400 hover:bg-emerald-500' : status === 'awake' ? 'bg-amber-300 hover:bg-amber-400' : 'bg-slate-200 hover:bg-slate-300'
+                  }`}
+                />
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Target City Row */}
+        <div className="space-y-1">
+          <div className="text-[11px] font-semibold text-slate-600 flex justify-between">
+            <span>{targetCity.name.split(' ')[0]} (UTC{targetCity.offset >= 0 ? `+${targetCity.offset}` : targetCity.offset})</span>
+          </div>
+          <div className="grid gap-0.5 h-6 rounded-lg overflow-hidden border border-slate-200" style={{ gridTemplateColumns: 'repeat(24, minmax(0, 1fr))' }}>
+            {Array.from({ length: 24 }).map((_, h) => {
+              const tH = (h + diffHours + 24) % 24;
+              const status = getHourStatus(tH);
+              const isSelected = h === selectedHour;
+              return (
+                <button
+                  key={h}
+                  type="button"
+                  onClick={() => setSelectedHour(h)}
+                  title={`${targetCity.name.split(' ')[0]}: ${formatHour(tH)}`}
+                  className={`h-full transition-all cursor-pointer ${
+                    isSelected ? 'ring-2 ring-blue-600 z-10 scale-110' : ''
+                  } ${
+                    status === 'work' ? 'bg-emerald-400 hover:bg-emerald-500' : status === 'awake' ? 'bg-amber-300 hover:bg-amber-400' : 'bg-slate-200 hover:bg-slate-300'
+                  }`}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+

@@ -2437,6 +2437,218 @@ export const CALCULATORS: CalculatorDefinition[] = [
       midTail: ['calculate bmi online', 'body mass index calculator'],
       longTail: ['what is bmi for 5 foot 10 and 165 pounds']
     }
+  },
+  // ==========================================
+  // RIVAL PARITY TOOLS (3 Calculators)
+  // ==========================================
+  {
+    id: 'oven-temperature-converter',
+    slug: 'oven-temperature-converter',
+    name: 'Oven Temperature Converter',
+    shortName: 'Oven Temp',
+    category: 'converters',
+    subcategory: 'Cooking & Kitchen',
+    metaTitle: 'Oven Temperature Converter - Fahrenheit, Celsius, Gas Mark & Fan Oven',
+    metaDescription: 'Convert oven temperatures easily between Fahrenheit, Celsius, Gas Mark, and Fan-Forced convection. Free baking conversion chart and temperature guide.',
+    h1: 'Oven Temperature Converter',
+    summary: 'Convert baking and roasting temperatures instantly between Fahrenheit (°F), Celsius (°C), Gas Mark, and Fan-assisted convection ovens with recommended heat bands.',
+    definition: 'An oven temperature converter translates culinary heat settings across Fahrenheit, Celsius, British Gas Marks, and convection fan-forced reductions for precise baking.',
+    searchKeywords: [
+      'oven temperature converter',
+      'gas mark to fahrenheit',
+      'gas mark to celsius',
+      'fan oven conversion',
+      'oven temp converter',
+      'baking temperature conversion',
+      'celsius to fahrenheit oven'
+    ],
+    popular: true,
+    featured: true,
+    formula: {
+      expression: '°C = (°F - 32) × 5/9 | Fan °C = Regular °C - 20°C | Fan °F = Regular °F - 25°F',
+      description: 'Convert between thermal units and apply the standard 20°C / 25°F convection reduction for fan-forced ovens.',
+      variables: [
+        { symbol: '°F', explanation: 'Conventional Fahrenheit temperature' },
+        { symbol: '°C', explanation: 'Conventional Celsius temperature' },
+        { symbol: 'Gas', explanation: 'British Gas Mark rating (1/4 to 10)' },
+        { symbol: 'Fan', explanation: 'Convection fan-assisted circulating heat setting' }
+      ]
+    },
+    howItWorks: [
+      'Choose your source unit: Fahrenheit (°F), Celsius (°C), Gas Mark, or Fan-Forced.',
+      'Enter the temperature from your recipe or select one of the quick baking presets.',
+      'Instantly view the converted settings across all 4 oven scales plus the culinary heat category (e.g. Slow, Moderate, Hot).'
+    ],
+    example: {
+      scenario: 'Converting 350°F standard recipe for a fan-assisted convection oven',
+      inputs: { 'Source Temperature': '350°F', 'Target': 'Fan-assisted Convection' },
+      steps: [
+        'Conventional Celsius: (350 - 32) × 5/9 = 176.7°C (Gas Mark 4)',
+        'Apply Fan Convection rule (subtract 20°C / 25°F): 176.7°C - 20°C = 156.7°C (approx 160°C Fan) or 325°F Fan',
+        'Culinary heat range: Moderate baking temperature'
+      ],
+      result: '160°C Fan / 325°F Fan (Gas Mark 4 equivalent)'
+    },
+    faqs: [
+      {
+        question: 'Why do fan ovens need a lower temperature setting?',
+        answer: 'Fan ovens circulate hot air continuously using an internal fan, transferring heat to food much more efficiently than conventional ovens. To prevent burning and ensure even baking, standard culinary guidelines recommend lowering the temperature by 20°C (about 25°F) or reducing cooking time by 10-15%.'
+      },
+      {
+        question: 'What temperature is Gas Mark 4 in Fahrenheit and Celsius?',
+        answer: 'Gas Mark 4 equals 350°F (177°C conventional, or 160°C in a fan oven). It is the most common standard baking temperature for cakes, cookies, and casseroles.'
+      },
+      {
+        question: 'What is the conversion for Gas Mark 6?',
+        answer: 'Gas Mark 6 equals 400°F (200°C conventional, or 180°C in a fan oven). It is typically used for roasting vegetables, chicken, and baking pastries.'
+      }
+    ],
+    relatedSlugs: ['cooking-unit-converter', 'temperature-converter'],
+    targetQueries: {
+      head: 'oven temperature converter',
+      midTail: ['gas mark to fahrenheit converter', 'celsius to fahrenheit oven', 'fan oven converter'],
+      longTail: ['what is 350 fahrenheit in celsius fan oven', 'gas mark 5 in fahrenheit and fan']
+    }
+  },
+  {
+    id: 'fuel-cost-calculator',
+    slug: 'fuel-cost-calculator',
+    name: 'Fuel Cost Calculator',
+    shortName: 'Fuel Cost',
+    category: 'everyday-finance',
+    subcategory: 'Transport & Travel',
+    metaTitle: 'Fuel Cost Calculator - Estimate Gas & Trip Cost per Mile, Gallon & Split',
+    metaDescription: 'Calculate total trip gas cost, fuel volume needed, and expense split per passenger. Supports MPG (US/UK) and L/100km with round-trip calculation.',
+    h1: 'Fuel Cost Calculator',
+    summary: 'Calculate the exact gas and fuel cost for road trips, commutes, or group travel. Computes total gallons or liters needed, cost per passenger, and cost per mile or kilometer.',
+    definition: 'A fuel cost calculator estimates the total financial expenditure for vehicle travel based on route distance, vehicle fuel consumption rate, and local pump price.',
+    searchKeywords: [
+      'fuel cost calculator',
+      'gas cost calculator',
+      'trip gas calculator',
+      'gas price calculator for road trip',
+      'fuel calculator per mile',
+      'split gas cost calculator',
+      'commute gas calculator'
+    ],
+    popular: true,
+    featured: true,
+    formula: {
+      expression: 'Fuel Needed = Distance / MPG | Total Cost = Fuel Needed × Price | Split = Total Cost / Passengers',
+      description: 'Divide travel distance by fuel economy to find required fuel quantity, then multiply by price per unit volume.',
+      variables: [
+        { symbol: 'Distance', explanation: 'One-way or round-trip mileage or kilometers' },
+        { symbol: 'MPG', explanation: 'Vehicle fuel economy in miles per gallon or L/100km' },
+        { symbol: 'Price', explanation: 'Current local fuel price per gallon or liter' },
+        { symbol: 'Passengers', explanation: 'Total people sharing fuel expenses' }
+      ]
+    },
+    howItWorks: [
+      'Enter your one-way or round-trip distance in miles or kilometers.',
+      'Enter your car fuel efficiency (or pick a vehicle preset like Sedan 32 MPG or SUV 22 MPG).',
+      'Enter current gas price per gallon or liter, and number of passengers splitting the expense.',
+      'Instantly see total fuel needed, total cost, cost per passenger, and cost per mile.'
+    ],
+    example: {
+      scenario: '300-mile weekend road trip in a 30 MPG crossover with gas at $3.60/gallon shared by 3 passengers',
+      inputs: { 'Distance': '300 miles', 'Fuel Economy': '30 MPG', 'Gas Price': '$3.60/gal', 'Passengers': '3' },
+      steps: [
+        'Total fuel needed: 300 / 30 = 10.00 gallons',
+        'Total gas cost: 10.00 × $3.60 = $36.00',
+        'Cost per passenger: $36.00 / 3 = $12.00 per person',
+        'Cost per mile: $36.00 / 300 = $0.12 per mile'
+      ],
+      result: '$36.00 total trip fuel cost ($12.00 per passenger)'
+    },
+    faqs: [
+      {
+        question: 'How do I calculate fuel cost for a road trip?',
+        answer: 'To calculate road trip fuel cost, divide your total distance by your car’s average MPG to get total gallons needed, then multiply that number by the local gas price per gallon. For round trips, remember to double the one-way distance.'
+      },
+      {
+        question: 'How does highway driving affect my fuel cost?',
+        answer: 'Most gas vehicles achieve 15-25% higher MPG during highway cruising compared to stop-and-go city driving. Using highway MPG for long road trips yields more accurate budgeting.'
+      },
+      {
+        question: 'How do I convert between MPG and Liters per 100km (L/100km)?',
+        answer: 'To convert US MPG to L/100km, divide 235.215 by the MPG number (e.g. 30 MPG = 235.215 / 30 = 7.84 L/100km).'
+      }
+    ],
+    relatedSlugs: ['commute-cost-calculator', 'fuel-economy-converter', 'split-bill-calculator'],
+    targetQueries: {
+      head: 'fuel cost calculator',
+      midTail: ['calculate gas cost for trip', 'road trip gas calculator', 'gas cost per mile'],
+      longTail: ['how much will gas cost for 500 miles', 'split gas calculator with friends']
+    }
+  },
+  {
+    id: 'time-zone-planner',
+    slug: 'time-zone-planner',
+    name: 'Time Zone Planner',
+    shortName: 'Time Zone',
+    category: 'date-time',
+    subcategory: 'Global Time',
+    metaTitle: 'Time Zone Planner - Coordinate International Meetings & Overlapping Hours',
+    metaDescription: 'Plan international meetings across multiple time zones. Interactive 24-hour visual schedule to find overlapping business hours across global cities.',
+    h1: 'Time Zone Planner',
+    summary: 'Find optimal meeting times across different global time zones. View a 24-hour color-coded availability matrix between cities to coordinate remote work and calls without confusion.',
+    definition: 'A time zone planner is a scheduling utility that visualizes overlapping working and awake hours across multiple global regions to prevent cross-border scheduling conflicts.',
+    searchKeywords: [
+      'time zone planner',
+      'meeting planner across time zones',
+      'world clock meeting planner',
+      'time zone converter for meetings',
+      'time difference calculator',
+      'international meeting scheduler'
+    ],
+    popular: true,
+    featured: true,
+    formula: {
+      expression: 'Target Local Time = Base Time + (Target UTC Offset - Base UTC Offset)',
+      description: 'Compute exact local wall-clock times by adjusting for the algebraic difference between UTC time zone offsets.',
+      variables: [
+        { symbol: 'Base Time', explanation: 'Selected hour in your reference location' },
+        { symbol: 'Target UTC Offset', explanation: 'Hours ahead or behind UTC for the recipient city' },
+        { symbol: 'Base UTC Offset', explanation: 'Hours ahead or behind UTC for your home city' }
+      ]
+    },
+    howItWorks: [
+      'Select your origin city (e.g. New York, London, Tokyo, San Francisco).',
+      'Add one or more destination cities to compare.',
+      'Check the 24-hour color-coded timeline matrix: Green indicates mutual 9 AM to 5 PM business hours, Yellow indicates early morning/evening, and Dark indicates sleep hours.',
+      'Pick the best mutually agreeable meeting window.'
+    ],
+    example: {
+      scenario: 'Scheduling a 1-hour video call between New York (UTC-5) and London (UTC+0)',
+      inputs: { 'Base City': 'New York (EDT/EST, UTC-5)', 'Target City': 'London (BST/GMT, UTC+0)' },
+      steps: [
+        'Time difference: London is 5 hours ahead of New York',
+        'New York 9:00 AM = London 2:00 PM (both within regular business hours)',
+        'New York 12:00 PM = London 5:00 PM (end of London business day)',
+        'Optimal overlap window: 9:00 AM to 12:00 PM New York time'
+      ],
+      result: 'Best meeting time: 10:00 AM New York (3:00 PM London)'
+    },
+    faqs: [
+      {
+        question: 'What is the best time for a call between New York and London?',
+        answer: 'The ideal window is between 9:00 AM and 12:00 PM New York time, which corresponds to 2:00 PM to 5:00 PM in London. Both teams are within standard working hours.'
+      },
+      {
+        question: 'How do daylight saving time changes affect meeting planners?',
+        answer: 'Because countries switch to daylight saving time on different Sundays in the spring and autumn (and some tropical nations do not observe DST at all), the time difference between two cities can shift by 1 hour for several weeks twice a year.'
+      },
+      {
+        question: 'What is UTC and GMT?',
+        answer: 'UTC (Coordinated Universal Time) is the global civil time standard. GMT (Greenwich Mean Time) is a time zone used in parts of Europe and Africa that shares the same current time as UTC with no offset.'
+      }
+    ],
+    relatedSlugs: ['time-duration-calculator', 'days-between-dates'],
+    targetQueries: {
+      head: 'time zone planner',
+      midTail: ['international meeting planner time zone', 'world clock planner', 'time zone converter meeting'],
+      longTail: ['best time to schedule call between new york and london', 'overlapping work hours calculator']
+    }
   }
 ];
 

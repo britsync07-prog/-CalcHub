@@ -3,6 +3,7 @@ import { ExternalLink, ArrowRight } from 'lucide-react';
 import { CALCULATORS } from '../data/calculators';
 import { CATEGORIES } from '../data/categories';
 import { PROGRAMMATIC_PAGES, getProgrammaticHref } from '../data/programmaticPages';
+import { GUIDES } from '../data/guides';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { updateSEO } from '../utils/seo';
 
@@ -81,6 +82,39 @@ export const HtmlSitemapPage: React.FC<HtmlSitemapPageProps> = ({ onNavigate }) 
             </div>
           );
         })}
+
+        {/* Editorial Guides & Articles */}
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+            <a
+              href="/blog"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate('/blog');
+              }}
+              className="text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors"
+            >
+              Editorial Guides &amp; Math Breakdowns ({GUIDES.length} articles)
+            </a>
+            <span className="text-xs text-slate-400">/blog</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-xs">
+            {GUIDES.map((guide) => (
+              <a
+                key={guide.slug}
+                href={`/blog/${guide.slug}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onNavigate(`/blog/${guide.slug}`);
+                }}
+                className="p-2 rounded-lg hover:bg-slate-50 text-slate-700 hover:text-blue-600 flex items-center justify-between transition-colors"
+              >
+                <span className="truncate">{guide.title}</span>
+                <ArrowRight className="w-3 h-3 text-slate-300" />
+              </a>
+            ))}
+          </div>
+        </div>
 
         {/* Programmatic Pages */}
         <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-4">

@@ -25,6 +25,7 @@ No sign-up. All computation runs in the visitor's browser.
 ## Key entry points
 - Homepage: https://everyday-calculator-hub-cw8.pages.dev/
 - All calculators: https://everyday-calculator-hub-cw8.pages.dev/all-calculators
+- Guides Hub: https://everyday-calculator-hub-cw8.pages.dev/blog
 - Categories:
   - https://everyday-calculator-hub-cw8.pages.dev/category/everyday-finance
   - https://everyday-calculator-hub-cw8.pages.dev/category/date-time
@@ -36,6 +37,9 @@ No sign-up. All computation runs in the visitor's browser.
   - https://everyday-calculator-hub-cw8.pages.dev/calculators/percentage-calculator
   - https://everyday-calculator-hub-cw8.pages.dev/calculators/compound-interest-calculator
   - https://everyday-calculator-hub-cw8.pages.dev/calculators/age-calculator
+  - https://everyday-calculator-hub-cw8.pages.dev/calculators/fuel-cost-calculator
+  - https://everyday-calculator-hub-cw8.pages.dev/calculators/oven-temperature-converter
+  - https://everyday-calculator-hub-cw8.pages.dev/calculators/time-zone-planner
   - https://everyday-calculator-hub-cw8.pages.dev/calculators/bmi-calculator
   - https://everyday-calculator-hub-cw8.pages.dev/calculators/temperature-converter
   - https://everyday-calculator-hub-cw8.pages.dev/calculators/paint-calculator

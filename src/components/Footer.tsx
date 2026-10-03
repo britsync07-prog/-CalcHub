@@ -59,7 +59,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onClick={(e) => handleLinkClick(e, '/all-calculators')}
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-                  All 50+ Calculators →
+                  All 55+ Calculators →
                 </a>
               </li>
             </ul>
@@ -91,6 +91,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               Trust & Resources
             </h3>
             <ul className="space-y-2 text-xs">
+              <li>
+                <a href="/blog" onClick={(e) => handleLinkClick(e, '/blog')} className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
+                  Calculation Guides & Blog →
+                </a>
+              </li>
               <li>
                 <a href="/about" onClick={(e) => handleLinkClick(e, '/about')} className="hover:text-white transition-colors">
                   About Us & Accuracy

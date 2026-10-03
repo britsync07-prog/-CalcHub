@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Share2, Copy, Check, RotateCcw, ChevronDown, ChevronUp, ArrowRight, Bookmark } from 'lucide-react';
+import { Share2, Copy, Check, RotateCcw, ChevronDown, ChevronUp, ArrowRight, Bookmark, Code, Printer } from 'lucide-react';
 import { CalculatorDefinition, RegionalLocale, TeamMember } from '../types/calculator';
 import { Breadcrumbs } from './Breadcrumbs';
 import { AdSlot } from './AdSlot';
+import { EmbedCalculatorModal } from './EmbedCalculatorModal';
 import { CALCULATORS } from '../data/calculators';
 import { CATEGORIES } from '../data/categories';
 
@@ -36,8 +37,35 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
   const [copied, setCopied] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [bookmarked, setBookmarked] = useState(false);
+  const [embedModalOpen, setEmbedModalOpen] = useState(false);
+
+  const isEmbedMode = typeof window !== 'undefined' && window.location.search.includes('embed=true');
 
   const category = CATEGORIES.find(c => c.id === calculator.category);
+
+  if (isEmbedMode) {
+    return (
+      <div className="p-3 bg-white min-h-screen">
+        <div className="bg-white rounded-2xl border border-slate-200 p-4 shadow-xs">
+          <div className="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-3">
+            <h1 className="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-1.5">
+              <span className="w-5 h-5 rounded bg-blue-600 text-white flex items-center justify-center font-mono font-bold text-[10px]">∑</span>
+              {calculator.name}
+            </h1>
+            <a
+              href={`https://everyday-calculator-hub-cw8.pages.dev/calculators/${calculator.slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] font-bold text-blue-600 hover:underline flex items-center gap-1"
+            >
+              Everyday Calculator Hub ↗
+            </a>
+          </div>
+          {children}
+        </div>
+      </div>
+    );
+  }
 
   const breadcrumbs = [
     { name: category ? category.name : 'Calculators', href: `/category/${calculator.category}` },
@@ -98,6 +126,26 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
                 >
                   <Bookmark className={`w-3 h-3 sm:w-3.5 sm:h-3.5 ${bookmarked ? 'fill-blue-600 text-blue-600' : ''}`} />
                   <span>{bookmarked ? 'Saved' : 'Save'}</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setEmbedModalOpen(true)}
+                  className="flex items-center gap-1 px-2 py-1 sm:px-2.5 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg sm:rounded-xl shadow-2xs transition-colors cursor-pointer"
+                  title="Embed this calculator widget on your site or blog"
+                >
+                  <Code className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-blue-600" />
+                  <span>Embed</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => typeof window !== 'undefined' && window.print()}
+                  className="hidden sm:flex items-center gap-1 px-2 py-1 sm:px-2.5 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg sm:rounded-xl shadow-2xs transition-colors cursor-pointer"
+                  title="Print calculation report"
+                >
+                  <Printer className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-500" />
+                  <span>Print</span>
                 </button>
 
                 {onReset && (
@@ -409,6 +457,13 @@ export const CalculatorLayout: React.FC<CalculatorLayoutProps> = ({
           </div>
         </aside>
       </div>
+
+      <EmbedCalculatorModal
+        isOpen={embedModalOpen}
+        onClose={() => setEmbedModalOpen(false)}
+        calculatorSlug={calculator.slug}
+        calculatorName={calculator.name}
+      />
     </div>
   );
 };

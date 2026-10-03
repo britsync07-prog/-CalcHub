@@ -62,7 +62,7 @@ export const CalculatorDetailPage: React.FC<CalculatorDetailPageProps> = ({
     if (!calculator || !enriched || !author) return;
 
     // Dynamic Title, Description & Canonical
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com';
+    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev';
     const canonicalPath = `/calculators/${calculator.slug}`;
     const pageUrl = `${origin}${canonicalPath}`;
 

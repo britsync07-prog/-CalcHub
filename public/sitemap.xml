@@ -2,224 +2,224 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://everydaycalculatorhub.com/</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Complete Directory -->
   <url>
-    <loc>https://everydaycalculatorhub.com/all-calculators</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/all-calculators</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Categories -->
   <url>
-    <loc>https://everydaycalculatorhub.com/category/everyday-finance</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/category/everyday-finance</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaycalculatorhub.com/category/date-time</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/category/date-time</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaycalculatorhub.com/category/math-stats</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/category/math-stats</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaycalculatorhub.com/category/converters</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/category/converters</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaycalculatorhub.com/category/home-improvement</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/category/home-improvement</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://everydaycalculatorhub.com/category/health-fitness</loc>
+    <loc>https://everyday-calculator-hub-cw8.pages.dev/category/health-fitness</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Core Calculators -->
-  <url><loc>https://everydaycalculatorhub.com/calculators/percentage-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/percent-change-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/percentage-difference-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/discount-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/sales-tax-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/tip-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/split-bill-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/profit-margin-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/markup-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/commission-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/simple-interest-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/compound-interest-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/hourly-to-salary-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/salary-to-hourly-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/percentage-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/percent-change-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/percentage-difference-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/discount-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/sales-tax-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/tip-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/split-bill-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/profit-margin-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/markup-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/commission-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/simple-interest-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/compound-interest-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/hourly-to-salary-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/salary-to-hourly-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
-  <url><loc>https://everydaycalculatorhub.com/calculators/days-between-dates</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/date-difference-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/days-from-today</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/age-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/business-days-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/time-duration-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/countdown-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/week-number-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/days-between-dates</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/date-difference-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/days-from-today</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/age-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/business-days-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/time-duration-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/countdown-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/week-number-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://everydaycalculatorhub.com/calculators/scientific-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/fraction-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/decimal-to-fraction-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/ratio-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/square-root-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/exponent-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/lcm-gcd-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/prime-number-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/mean-median-mode-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/standard-deviation-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/scientific-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/fraction-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/decimal-to-fraction-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/ratio-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/square-root-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/exponent-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/lcm-gcd-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/prime-number-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/mean-median-mode-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/standard-deviation-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
-  <url><loc>https://everydaycalculatorhub.com/calculators/length-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/weight-mass-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/temperature-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/area-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/volume-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/speed-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/data-storage-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/pressure-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/fuel-economy-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/length-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/weight-mass-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/temperature-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/area-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/volume-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/speed-converter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/data-storage-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/pressure-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/fuel-economy-converter</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://everydaycalculatorhub.com/calculators/square-footage-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/paint-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/flooring-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/tile-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/concrete-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/mulch-gravel-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/square-footage-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/paint-calculator</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/flooring-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/tile-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/concrete-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/mulch-gravel-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 
-  <url><loc>https://everydaycalculatorhub.com/calculators/running-pace-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/walking-steps-to-distance-calories</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/daily-water-intake-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/calculators/body-mass-index-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/running-pace-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/walking-steps-to-distance-calories</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/daily-water-intake-calculator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/calculators/body-mass-index-calculator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Programmatic Pages (hand-written) -->
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/days-until/christmas</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/days-until/new-year</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/days-until/halloween</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/days-until/christmas</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/days-until/new-year</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/days-until/halloween</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Programmatic Pages (bulk percentage long-tail) -->
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/5-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/10-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/12-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/15-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/18-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/20-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/25-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/30-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/35-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/40-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/50-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/60-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/percentage/75-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/5-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/10-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/12-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/15-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/18-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/20-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/25-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/30-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/35-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/40-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/50-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/60-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-50</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-100</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-150</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-200</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-250</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-300</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-500</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/percentage/75-percent-of-1000</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Trust Pages -->
-  <url><loc>https://everydaycalculatorhub.com/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/terms-of-use</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/disclaimer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://everydaycalculatorhub.com/sitemap</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/privacy-policy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/terms-of-use</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/disclaimer</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://everyday-calculator-hub-cw8.pages.dev/sitemap</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 </urlset>

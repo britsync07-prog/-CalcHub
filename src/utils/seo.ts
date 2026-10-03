@@ -51,7 +51,7 @@ export function updateSEO({
   setMeta('property', 'og:site_name', siteName);
 
   // Dynamic canonical URL resolution
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com';
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev';
   const canonicalUrl = `${baseUrl}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
   setMeta('property', 'og:url', canonicalUrl);
 
@@ -124,7 +124,7 @@ export function generateCalculatorSchema({
     creator: {
       '@type': 'Organization',
       name: 'Everyday Calculator Hub',
-      url: typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com'
+      url: typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev'
     }
   };
 }
@@ -146,7 +146,7 @@ export function generateFaqSchema(faqs: { question: string; answer: string }[]) 
 }
 
 export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://everydaycalculatorhub.com';
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev';
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -159,7 +159,7 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
   };
 }
 
-export const SITE_ORIGIN_FALLBACK = 'https://everydaycalculatorhub.com';
+export const SITE_ORIGIN_FALLBACK = 'https://everyday-calculator-hub-cw8.pages.dev';
 
 export function siteOrigin(): string {
   return typeof window !== 'undefined' ? window.location.origin : SITE_ORIGIN_FALLBACK;

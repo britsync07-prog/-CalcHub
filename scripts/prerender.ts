@@ -16,6 +16,7 @@ import {
   generateBlogPostingSchema,
   generateOrganizationSchema,
   generateWebSiteSchema,
+  normalizePath,
   withArticleDates
 } from '../src/utils/seo';
 import {
@@ -26,7 +27,7 @@ import {
   DEFAULT_DATE_UPDATED
 } from '../src/data/seoEnrichment';
 
-const BASE_URL = 'https://everyday-calculator-hub-cw8.pages.dev';
+const BASE_URL = (process.env.SITE_URL || 'https://everyday-calculator-hub-cw8.pages.dev').replace(/\/+$/, '');
 const DIST_DIR = path.resolve(process.cwd(), 'dist');
 const TEMPLATE_PATH = path.join(DIST_DIR, 'index.html');
 
@@ -145,7 +146,7 @@ async function runPrerender() {
       generateCalculatorSchema({
         name: calc.name,
         description: calc.metaDescription,
-        url: `${BASE_URL}/calculators/${calc.slug}`,
+        url: `${BASE_URL}/calculators/${calc.slug}/`,
         category: calc.category
       }),
       pubDate,
@@ -319,11 +320,12 @@ async function runPrerender() {
       const appHtml = renderToString(React.createElement(App, { initialPath: route.path }));
 
       // 2. Prepare Meta and Schema Head Tags
-      const canonicalUrl = `${BASE_URL}${route.canonicalPath}`;
+      const canonicalUrl = `${BASE_URL}${normalizePath(route.canonicalPath)}`;
       const safeTitle = escapeHtml(route.title);
       const safeDesc = escapeHtml(route.description);
       const ogType = route.type || 'website';
-      const ogImage = route.image || `${BASE_URL}/og-image.svg`;
+      const ogImage = route.image || `${BASE_URL}/og-image.png`;
+      const is404 = route.path === '/404';
 
       // Schemas JSON-LD
       const schemaScripts = route.schemas
@@ -351,8 +353,9 @@ async function runPrerender() {
       html = html.replace(/<meta name="twitter:description" content=".*?" \/>/i, `<meta name="twitter:description" content="${safeDesc}" />`);
       html = html.replace(/<meta name="twitter:image" content=".*?" \/>/i, `<meta name="twitter:image" content="${ogImage}" />`);
 
-      // Inject Canonical Link & Schemas before </head>
-      const headInjection = `    <link rel="canonical" href="${canonicalUrl}" />${schemaScripts}\n  </head>`;
+      // Inject Canonical Link, robots directive & Schemas before </head>
+      const canonicalTag = is404 ? '    <meta name="robots" content="noindex, follow" />' : `    <link rel="canonical" href="${canonicalUrl}" />`;
+      const headInjection = `${canonicalTag}${schemaScripts}\n  </head>`;
       html = html.replace('</head>', headInjection);
 
       // Inject Rendered Root Body
@@ -383,7 +386,7 @@ async function runPrerender() {
 ${sitemapRoutes
   .map(
     r => `  <url>
-    <loc>${BASE_URL}${r.canonicalPath}</loc>
+    <loc>${BASE_URL}${normalizePath(r.canonicalPath)}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority.toFixed(1)}</priority>
@@ -393,10 +396,10 @@ ${sitemapRoutes
 </urlset>
 `;
 
-  // Write sitemap to both dist/ and public/
+  // The sitemap is a build artifact. Writing it back into public/ used to leave
+  // a stale, committed copy that disagreed with the deployed build.
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
-  fs.writeFileSync(path.resolve(process.cwd(), 'public', 'sitemap.xml'), sitemapXml, 'utf-8');
-  console.log(`✅ Generated canonical sitemap with ${sitemapRoutes.length} indexed URLs at dist/sitemap.xml and public/sitemap.xml!`);
+  console.log(`✅ Generated canonical sitemap with ${sitemapRoutes.length} indexed URLs at dist/sitemap.xml!`);
 
   // 11. Ensure robots.txt in dist/
   const robotsSrc = path.resolve(process.cwd(), 'public', 'robots.txt');

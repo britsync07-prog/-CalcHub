@@ -152,6 +152,14 @@ export const CALCULATORS: CalculatorDefinition[] = [
       {
         question: 'How is percent difference different from percent change?',
         answer: 'Percent change compares an old value to a new value with a clear direction. Percent difference compares two numbers where neither is considered the original starting point.'
+      },
+      {
+        question: 'When should I use percentage difference instead of percentage change?',
+        answer: 'Use percentage difference when you are comparing two measurements of the same thing and neither value is a baseline — for example, comparing two test scores or two lab readings. Use percentage change when one value clearly comes before the other.'
+      },
+      {
+        question: 'What happens if both values are zero?',
+        answer: 'The formula divides by the average of the two values, so a pair of zeros has no defined percentage difference. The calculator reports the result as undefined rather than dividing by zero.'
       }
     ],
     relatedSlugs: ['percentage-calculator', 'percent-change-calculator', 'ratio-calculator'],

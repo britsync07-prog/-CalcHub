@@ -1,26 +1,18 @@
 import { TeamMember } from '../types/calculator';
 
+/**
+ * One real person maintains this project. Earlier drafts of this file listed
+ * invented subject-matter experts; publishing fake credentials is worse than
+ * publishing none, so the byline now points at the developer who actually
+ * writes and verifies every formula.
+ */
 export const EDITORIAL_TEAM: TeamMember[] = [
   {
-    id: 'maya-chen',
-    name: 'Maya Chen',
-    role: 'Personal Finance Editor',
-    credentials: 'B.A. Economics; 8 years covering consumer money math, taxes, and salary benchmarking',
-    bio: 'Maya edits every finance calculator on Everyday Calculator Hub. She verifies each formula against public tax tables and labor statistics, and writes the step-by-step examples so readers can reproduce every result by hand.'
-  },
-  {
-    id: 'daniel-okoro',
-    name: 'Daniel Okoro',
-    role: 'Mathematics Editor',
-    credentials: 'M.Sc. Applied Mathematics; former secondary-school maths teacher',
-    bio: 'Daniel owns our math, statistics, date, and converter tools. He checks each derivation, edge case (leap years, rounding, sample vs population statistics), and unit factor against BIPM, NIST, and ISO references.'
-  },
-  {
-    id: 'sofia-marchetti',
-    name: 'Sofia Marchetti',
-    role: 'Home & Wellness Reviewer',
-    credentials: 'Certified kitchen & bath designer; marathon runner and run-club coach',
-    bio: 'Sofia reviews construction estimators and pace/wellness tools for real-world plausibility, from paint coverage rates and concrete yields to pacing charts and hydration guidance.'
+    id: 'musfiqur-rahman-saimon',
+    name: 'Musfiqur Rahman Saimon',
+    role: 'Founder & Developer',
+    credentials: 'Full-stack developer; builds, tests, and maintains every calculator and guide on this site',
+    bio: 'Musfiqur designs the calculators, checks each formula against primary sources (NIST, BIPM, IRS publications, and official statistics), and writes the worked examples so anyone can reproduce a result by hand.'
   }
 ];
 
@@ -30,5 +22,5 @@ export function getTeamMember(id: string | undefined, fallbackId: string): TeamM
   return found || fallback;
 }
 
-export const DEFAULT_AUTHOR_ID = 'daniel-okoro';
-export const DEFAULT_REVIEWER_ID = 'maya-chen';
+export const DEFAULT_AUTHOR_ID = 'musfiqur-rahman-saimon';
+export const DEFAULT_REVIEWER_ID = 'musfiqur-rahman-saimon';

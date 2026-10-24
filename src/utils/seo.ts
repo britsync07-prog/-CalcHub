@@ -50,9 +50,11 @@ export function updateSEO({
   setMeta('property', 'og:type', type);
   setMeta('property', 'og:site_name', siteName);
 
-  // Dynamic canonical URL resolution
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev';
-  const canonicalUrl = `${baseUrl}${canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`}`;
+  // Dynamic canonical URL resolution. Cloudflare Pages serves directory
+  // builds with a trailing slash and 308s the slashless form, so the canonical
+  // must match the URL that actually returns 200.
+  const baseUrl = siteOrigin();
+  const canonicalUrl = `${baseUrl}${normalizePath(canonicalPath)}`;
   setMeta('property', 'og:url', canonicalUrl);
 
   // 5. Twitter
@@ -61,7 +63,7 @@ export function updateSEO({
   setMeta('name', 'twitter:card', 'summary_large_image');
 
   // 5b. Social share image (per-route override or site default)
-  const shareImage = image && image.startsWith('http') ? image : `${baseUrl}${image || '/og-image.svg'}`;
+  const shareImage = image && image.startsWith('http') ? image : `${baseUrl}${image || '/og-image.png'}`;
   setMeta('property', 'og:image', shareImage);
   setMeta('name', 'twitter:image', shareImage);
 
@@ -124,7 +126,7 @@ export function generateCalculatorSchema({
     creator: {
       '@type': 'Organization',
       name: 'Everyday Calculator Hub',
-      url: typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev'
+      url: siteOrigin()
     }
   };
 }
@@ -146,7 +148,7 @@ export function generateFaqSchema(faqs: { question: string; answer: string }[]) 
 }
 
 export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
-  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://everyday-calculator-hub-cw8.pages.dev';
+  const origin = siteOrigin();
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -154,15 +156,29 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url.startsWith('http') ? item.url : `${origin}${item.url}`
+      item: item.url.startsWith('http') ? item.url : `${origin}${normalizePath(item.url)}`
     }))
   };
 }
 
 export const SITE_ORIGIN_FALLBACK = 'https://everyday-calculator-hub-cw8.pages.dev';
 
+/** Trailing-slash canonical form used by Cloudflare Pages directory builds. */
+export function normalizePath(pathname: string): string {
+  const clean = (pathname || '/').split('?')[0].split('#')[0];
+  if (!clean || clean === '/') return '/';
+  const withLeadingSlash = clean.startsWith('/') ? clean : `/${clean}`;
+  return withLeadingSlash.endsWith('/') ? withLeadingSlash : `${withLeadingSlash}/`;
+}
+
+/**
+ * Browser: the origin actually serving the page.
+ * Prerender/CI: `SITE_URL` so canonicals can target a custom domain.
+ */
 export function siteOrigin(): string {
-  return typeof window !== 'undefined' ? window.location.origin : SITE_ORIGIN_FALLBACK;
+  if (typeof window !== 'undefined') return window.location.origin;
+  const fromEnv = typeof process !== 'undefined' ? process.env?.SITE_URL : undefined;
+  return (fromEnv || SITE_ORIGIN_FALLBACK).replace(/\/+$/, '');
 }
 
 export function generateHowToSchema({
@@ -210,16 +226,11 @@ export function generateOrganizationSchema() {
     url: origin,
     logo: {
       '@type': 'ImageObject',
-      url: `${origin}/og-image.svg`
+      url: `${origin}/og-image.png`
     },
     description:
       'Everyday Calculator Hub publishes free, client-side calculators and converters for everyday math, personal finance, dates, measurements, and home improvement.',
-    foundingDate: '2025-01-15',
-    sameAs: [
-      'https://x.com/everydaycalchub',
-      'https://www.youtube.com/@everydaycalculatorhub',
-      'https://www.pinterest.com/everydaycalculatorhub/'
-    ]
+    foundingDate: '2026-10-03'
   };
 }
 
@@ -301,10 +312,10 @@ export function generateBlogPostingSchema({
       url: origin,
       logo: {
         '@type': 'ImageObject',
-        url: `${origin}/og-image.svg`
+        url: `${origin}/og-image.png`
       }
     },
-    image: image ? (image.startsWith('http') ? image : `${origin}${image}`) : `${origin}/og-image.svg`
+    image: image ? (image.startsWith('http') ? image : `${origin}${image}`) : `${origin}/og-image.png`
   };
 }
 

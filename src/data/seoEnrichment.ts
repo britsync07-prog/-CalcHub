@@ -2,8 +2,8 @@ import { CategoryId, ComparisonTable, FAQItem, Source } from '../types/calculato
 import { DEFAULT_AUTHOR_ID, DEFAULT_REVIEWER_ID, getTeamMember } from './editorialTeam';
 import { getComparisonTable } from './comparisonTables';
 
-export const DEFAULT_DATE_PUBLISHED = '2025-02-10';
-export const DEFAULT_DATE_UPDATED = '2026-10-01';
+export const DEFAULT_DATE_PUBLISHED = '2026-10-03';
+export const DEFAULT_DATE_UPDATED = '2026-10-24';
 
 /** One-sentence "X is..." definitions for direct-answer / AI extraction. */
 export const DEFINITIONS: Record<string, string> = {
@@ -161,21 +161,21 @@ const CATEGORY_SOURCES: Record<CategoryId, Source[]> = {
 };
 
 const AUTHOR_BY_CATEGORY: Record<CategoryId, string> = {
-  'everyday-finance': 'maya-chen',
-  'date-time': 'daniel-okoro',
-  'math-stats': 'daniel-okoro',
-  'converters': 'daniel-okoro',
-  'home-improvement': 'sofia-marchetti',
-  'health-fitness': 'sofia-marchetti'
+  'everyday-finance': 'musfiqur-rahman-saimon',
+  'date-time': 'musfiqur-rahman-saimon',
+  'math-stats': 'musfiqur-rahman-saimon',
+  'converters': 'musfiqur-rahman-saimon',
+  'home-improvement': 'musfiqur-rahman-saimon',
+  'health-fitness': 'musfiqur-rahman-saimon'
 };
 
 const REVIEWER_BY_CATEGORY: Record<CategoryId, string> = {
-  'everyday-finance': 'daniel-okoro',
-  'date-time': 'maya-chen',
-  'math-stats': 'maya-chen',
-  'converters': 'maya-chen',
-  'home-improvement': 'daniel-okoro',
-  'health-fitness': 'daniel-okoro'
+  'everyday-finance': 'musfiqur-rahman-saimon',
+  'date-time': 'musfiqur-rahman-saimon',
+  'math-stats': 'musfiqur-rahman-saimon',
+  'converters': 'musfiqur-rahman-saimon',
+  'home-improvement': 'musfiqur-rahman-saimon',
+  'health-fitness': 'musfiqur-rahman-saimon'
 };
 
 export function getCalculatorDates() {

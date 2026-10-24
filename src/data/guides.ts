@@ -44,11 +44,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Complete guide to tipping etiquette for restaurants, food delivery, bartenders, salons, and hotels. Master tipping percentages and calculation formulas.',
     h1: 'The Definitive Guide to Tipping: Rates, Rules, and Modern Etiquette',
     summary: 'Master standard tipping percentages, pre-tax vs post-tax calculation rules, salon and rideshare etiquette, and international customs with practical formulas.',
-    publishedDate: '2025-01-15',
-    updatedDate: '2026-02-10',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Elena Rostova, CFP',
-      role: 'Consumer Finance Analyst'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 7,
     category: 'Everyday & Money',
@@ -130,11 +130,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Complete kitchen measurement conversion guide. Convert dry and liquid cups to grams, ounces, milliliters, tablespoons, and teaspoons accurately.',
     h1: 'Kitchen Measurement & Volume Conversions: The Ultimate Culinary Guide',
     summary: 'Convert recipes effortlessly between US Customary, Imperial, and Metric units. Understand why weighing flour beats scooping and master volume-to-weight conversions.',
-    publishedDate: '2025-01-14',
-    updatedDate: '2026-02-12',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Chef Marcus Sterling',
-      role: 'Culinary Specialist & Recipe Developer'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 8,
     category: 'Unit Converters',
@@ -210,11 +210,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Complete oven temperature conversion chart. How to adjust temperatures for fan ovens, understand British Gas Marks, and avoid burnt baked goods.',
     h1: 'Oven Temperatures Demystified: Convection, Gas Mark, and Fan Oven Conversions',
     summary: 'Learn how to convert recipe oven temperatures across Fahrenheit, Celsius, Gas Mark, and Fan-assisted ovens with exact formulas and baking rules.',
-    publishedDate: '2025-01-20',
-    updatedDate: '2026-02-15',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Chef Marcus Sterling',
-      role: 'Culinary Specialist & Recipe Developer'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 7,
     category: 'Unit Converters',
@@ -278,11 +278,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Step-by-step formulas for estimating renovation materials. How to calculate paint gallons, flooring boxes, tile waste, and room square footage.',
     h1: 'Home Renovation Estimating: How to Calculate Paint, Flooring, and Tiles Accurately',
     summary: 'Avoid expensive over-ordering or project delays. Master square footage calculations, waste percentages, and material coverage formulas for DIY home projects.',
-    publishedDate: '2025-01-13',
-    updatedDate: '2026-02-18',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Derek Vance',
-      role: 'General Contractor & Construction Estimator'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 9,
     category: 'Home & Construction',
@@ -343,11 +343,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Learn how to split restaurant checks and household expenses without awkwardness. Pros and cons of even splitting, itemized breakdowns, and digital app tips.',
     h1: 'How to Split Bills Fairly: Group Dining, Shared Utilities, and Modern Etiquette',
     summary: 'Navigate group expenses with grace. Understand when even splitting works, how to handle non-drinkers and dietary differences, and master sales tax allocation.',
-    publishedDate: '2025-01-12',
-    updatedDate: '2026-02-18',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Elena Rostova, CFP',
-      role: 'Consumer Finance Analyst'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 7,
     category: 'Everyday & Money',
@@ -398,11 +398,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Calculate the true monthly and annual cost of commuting to work. Formulas for fuel consumption, IRS mileage rates, vehicle depreciation, and lost time.',
     h1: 'The Real Cost of Your Daily Commute: Fuel, Depreciation, and Travel Time',
     summary: 'Commuting costs far more than gas pump charges. Calculate tire wear, insurance rate increments, vehicle depreciation, and opportunity cost of drive time.',
-    publishedDate: '2025-01-11',
-    updatedDate: '2026-02-20',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Elena Rostova, CFP',
-      role: 'Consumer Finance Analyst'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 8,
     category: 'Everyday & Money',
@@ -451,11 +451,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Understand chronological age calculations, leap year adjustments, elapsed calendar days, and next birthday countdowns with precision.',
     h1: 'Calculating Exact Chronological Age, Days Lived, and Calendar Intervals',
     summary: 'Discover how chronological age is computed down to years, months, days, and total hours lived. Learn how leap years and variable calendar month lengths work.',
-    publishedDate: '2025-01-10',
-    updatedDate: '2026-02-20',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Dr. Aris Thorne',
-      role: 'Applied Mathematician & Statistical Consultant'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 6,
     category: 'Date & Time',
@@ -492,11 +492,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Master cross-timezone meeting planning. How to find overlapping business hours between North America, Europe, and Asia-Pacific without burnout.',
     h1: 'Coordinating Global Teams: How to Schedule Meetings Across Time Zones',
     summary: 'Eliminate scheduling confusion for international remote teams. Master UTC offsets, daylight saving discrepancies, and overlapping working windows.',
-    publishedDate: '2025-01-09',
-    updatedDate: '2026-02-22',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Elena Rostova, CFP',
-      role: 'Consumer Finance Analyst'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 7,
     category: 'Date & Time',
@@ -533,11 +533,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Master personal budgeting with percentage formulas. Learn how to allocate your net take-home salary across needs, wants, and savings with the 50/30/20 rule.',
     h1: 'Personal Budgeting With Percentages: Applying the 50/30/20 Rule',
     summary: 'Transform your paycheck into a clear financial plan. Calculate exact dollar allocations for needs, wants, and investments using mathematical ratios.',
-    publishedDate: '2025-01-08',
-    updatedDate: '2026-02-25',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Elena Rostova, CFP',
-      role: 'Consumer Finance Analyst'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 8,
     category: 'Everyday & Money',
@@ -576,11 +576,11 @@ export const GUIDES: GuideDefinition[] = [
     metaDescription: 'Master volume calculations for bulk landscaping and concrete slabs. Convert square feet and depth in inches to cubic yards and retail bags.',
     h1: 'Landscaping and Construction Estimating: Cubic Yards for Concrete, Mulch, and Gravel',
     summary: 'Never under-order materials again. Learn the cubic yard formula for garden beds, driveways, footings, and patios with practical bagged conversion factors.',
-    publishedDate: '2025-01-06',
-    updatedDate: '2026-02-28',
+    publishedDate: '2026-10-03',
+    updatedDate: '2026-10-24',
     author: {
-      name: 'Derek Vance',
-      role: 'General Contractor & Construction Estimator'
+      name: 'Musfiqur Rahman Saimon',
+      role: 'Founder & Developer'
     },
     readTimeMinutes: 9,
     category: 'Home & Construction',

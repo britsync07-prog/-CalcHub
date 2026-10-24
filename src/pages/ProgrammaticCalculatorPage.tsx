@@ -46,7 +46,7 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
     });
     const faqSchema = generateFaqSchema(page.faqs || []);
     const speakableSchema = generateSpeakableSchema(['.programmatic-direct-answer', '.faq-answer']);
-    const author = getTeamMember('daniel-okoro', 'daniel-okoro');
+    const author = getTeamMember('musfiqur-rahman-saimon', 'musfiqur-rahman-saimon');
 
     const schemas: Record<string, unknown>[] = [breadcrumbSchema];
     if (howToSchema) schemas.push(howToSchema);
@@ -92,7 +92,7 @@ export const ProgrammaticCalculatorPage: React.FC<ProgrammaticCalculatorPageProp
           {page.h1}
         </h1>
         <p className="text-[11px] sm:text-xs text-slate-500">
-          By <span className="font-semibold text-slate-700">Daniel Okoro</span>
+          By <span className="font-semibold text-slate-700">Musfiqur Rahman Saimon</span>
           <span className="text-slate-400"> (Mathematics Editor)</span>
           <span className="block sm:inline sm:before:content-['·_']">
             Updated <time dateTime={page.dateUpdated || FALLBACK_UPDATED}>{page.dateUpdated || FALLBACK_UPDATED}</time>

@@ -10,10 +10,11 @@ No sign-up. All computation runs in the visitor's browser.
 ## Editorial standards
 - Every calculator shows its formula, a worked example with real numbers,
   step-by-step working, FAQs, comparison tables where relevant, and sources.
-- Finance pages are edited by Maya Chen (Personal Finance Editor).
-- Math, date, and converter pages are edited by Daniel Okoro (Mathematics Editor).
-- Home and wellness pages are reviewed by Sofia Marchetti (Home & Wellness Reviewer).
-- Content freshness: published 2025-02-10, last site-wide review 2026-10-01.
+- All calculators and guides are written, checked, and maintained by
+  Musfiqur Rahman Saimon, the project's founder and developer.
+- Formulas are verified against primary references: NIST/BIPM for units,
+  IRS publications for tax math, and official statistics for salary data.
+- Content freshness: published 2026-10-03, last site-wide review 2026-10-24.
 
 ## How to cite us
 - Cite the specific calculator or problem page URL, e.g.

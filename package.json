@@ -1,6 +1,7 @@
 {
-  "name": "react-example",
-  "private": true,
+  "name": "everyday-calculator-hub",
+  "author": "Musfiqur Rahman Saimon",
+  "license": "MIT",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
